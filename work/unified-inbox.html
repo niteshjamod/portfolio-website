@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Unified Inbox — Case study by Nitesh Jamod. Re-architecting Salesmate's communication layer from a single workspace to a flexible multi-inbox system.">
+<meta name="theme-color" content="#F0EAE0">
+<meta property="og:title" content="Unified Inbox — Nitesh Jamod">
+<meta property="og:description" content="Complete re-architecture from single workspace to multi-inbox system with AI Copilot built in at every layer.">
+<meta property="og:url" content="https://niteshjamod.com/work/unified-inbox.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nitesh Jamod">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nitesh Jamod Portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unified Inbox · Nitesh Jamod">
+<meta name="twitter:description" content="Multi-inbox architecture with AI Copilot integrated at every layer.">
+<meta name="twitter:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta name="twitter:url" content="https://niteshjamod.com/work/unified-inbox.html">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<title>Unified Inbox · Nitesh Jamod</title>
+<link rel="icon" type="image/png" href="../assets/images/NJ_fav_icon.png">
+<link rel="canonical" href="https://niteshjamod.com/work/unified-inbox.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="page-unified-inbox-v2">
+
+<nav>
+  <a href="/" class="nl">NJ</a>
+  <a href="/" class="nb">← Back to Work</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-top">
+    <div>
+      <div class="hl">Portfolio · Salesmate</div>
+      <h1>Unified<br><span>Inbox</span></h1>
+      <p class="hsub">A complete re-architecture of how Salesmate handles customer conversations - from a single rigid workspace to a flexible, multi-inbox system that scales across teams and channels.</p>
+    </div>
+    <div class="hero-right">
+      <div class="sc-wrap">
+  <div class="sc-wrap-label">Live product <span>- All channels, one view</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-01.png" alt="Unified Inbox - system views, channel list, and conversation panel" class="img-fluid">
+  <div class="sc-cap">Unified Inbox - system views, channel list, and conversation panel</div></div></div>
+    </div>
+  </div>
+  <div class="hm">
+    <div><div class="ml">Role</div><div class="mv">Product Design Lead</div></div>
+    <div><div class="ml">Timeline</div><div class="mv">2–3 Months</div></div>
+    <div><div class="ml">Platform</div><div class="mv">Salesmate CRM · Web</div></div>
+    <div><div class="ml">Collaboration</div><div class="mv">CEO-direct</div></div>
+    <div><div class="ml">Status</div><div class="mv">Live · Shipped</div></div>
+    <div><div class="ml">Tools</div><div class="mv">Figma Design · FigJam</div></div>
+  </div>
+</div>
+
+<!-- 01 OVERVIEW -->
+<section>
+  <div class="sn">01</div>
+  <h2>Overview</h2>
+  <p class="sb">The Unified Inbox is one of Salesmate's core communication surfaces - the place where agents handle all customer conversations across every channel. This project wasn't a UI refresh. It was a complete re-engineering: moving from a single-workspace, per-channel system to a flexible, multi-inbox architecture with inbox-level access control, built-in AI Copilot, and a dedicated eCommerce AI tools layer.</p>
+  <p class="sb unified-inbox-v2-inline-01">Available across both Salesmate CRM and Skara, the new inbox supports chat, Facebook Messenger, Instagram, WhatsApp, Voice & Text, TikTok, and email - all manageable from a single view. I led design end-to-end, working directly with the CEO.</p>
+</section>
+
+<!-- 02 PROBLEM -->
+<div class="band">
+  <div class="bi">
+    <div class="sn">02</div>
+    <div class="bq">The old system <span>forced every team</span> into one workspace - with channel access managed separately for each channel, and a manual activation step just to get started.</div>
+    <div class="pg">
+      <div class="pc">
+        <div class="pn">01 - RIGIDITY</div>
+        <div class="pt">Single workspace limit</div>
+        <div class="pd">Every team - sales, support, marketing - had to share one workspace. There was no way for different teams to operate their own separate communication inboxes within the same CRM.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">02 - COMPLEXITY</div>
+        <div class="pt">Per-channel access control</div>
+        <div class="pd">Giving someone access to the inbox meant configuring permissions for every individual channel separately. As the number of channels grew, this became a significant admin burden.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">03 - FRICTION</div>
+        <div class="pt">Manual activation barrier</div>
+        <div class="pd">The old inbox required a separate activation step and license before teams could start using it - adding unnecessary friction to onboarding and slowing adoption.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 OLD vs NEW -->
+<section>
+  <div class="sn">03</div>
+  <h2>Old System vs New</h2>
+  <p class="sb">The core shift was architectural - from a single, centrally-managed workspace to a model where each team can own their inbox independently, with access and AI configured at the inbox level rather than scattered across individual channels.</p>
+  <div class="ev-grid">
+    <div class="ev-card">
+      <div class="ev-label old">Old System</div>
+      <ul class="ev-list old">
+        <li>Single workspace - all teams shared one inbox</li>
+        <li>Access configured per-channel, one by one</li>
+        <li>Separate activation step required (with license fee)</li>
+        <li>Channels managed in isolation from each other</li>
+        <li>No concept of multiple inboxes for different teams</li>
+        <li>AI not integrated at inbox level</li>
+      </ul>
+    </div>
+    <div class="ev-card">
+      <div class="ev-label new">New System</div>
+      <ul class="ev-list new">
+        <li>Multiple inboxes - each team has their own</li>
+        <li>Access granted at inbox level, applies to all channels inside</li>
+        <li>Default inbox active from day one - no activation needed</li>
+        <li>All channels managed together under their inbox</li>
+        <li>Sales, support, marketing inboxes can coexist in one account</li>
+        <li>AI Copilot, tone, length, and KB configured per inbox</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ARCHITECTURE -->
+<section class="unified-inbox-v2-inline-02">
+  <div class="sn">04</div>
+  <h2>Core Architecture</h2>
+  <p class="sb">Three foundational decisions shaped the new inbox model. Each one directly addressed a limitation of the old system and made the product significantly easier to set up, manage, and scale.</p>
+  <div class="arch-grid">
+    <div class="arch-card">
+      <div class="arch-num">01</div>
+      <div class="arch-title">Multiple Inboxes</div>
+      <div class="arch-desc">Teams can create separate inboxes - each with their own channels, access rules, and AI settings. A sales team and a support team can operate completely independently within the same Salesmate account.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-num">02</div>
+      <div class="arch-title">Inbox-Level Access</div>
+      <div class="arch-desc">Grant access to an inbox once - it automatically applies to every channel inside it. This replaced the old model where access had to be configured per-channel individually, drastically simplifying administration.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-num">03</div>
+      <div class="arch-title">Active by Default</div>
+      <div class="arch-desc">The new inbox removed the separate activation step entirely. A default inbox is ready to use from day one. Teams can immediately start adding channels and managing conversations - zero setup barrier.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 DESIGN DECISIONS -->
+<section class="unified-inbox-v2-inline-03">
+  <div class="sn">05</div>
+  <h2>Design Decisions</h2>
+
+  <!-- A -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">A</div>
+      <div>
+        <div class="dec-tag">Inbox Configuration</div>
+        <div class="dec-title">Everything Configurable at Inbox Level</div>
+        <div class="dec-desc">Each inbox has its own identity - name, accessibility (everyone or selected users/teams), business hours, and AI Pilot settings. The "Include AI Pilot Messages" toggle controls whether AI-generated replies are visible in the inbox view. The "AI disclaimer" toggle adds a customisable label below AI-generated messages, giving teams control over how transparent they want to be with customers about AI involvement.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Setup</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-02.png" alt="Inbox Settings - name, accessibility, business hours, AI Pilot visibility and disclaimer controls" class="img-fluid">
+  <div class="sc-cap">Inbox Settings - name, accessibility, business hours, AI Pilot visibility and disclaimer controls</div></div></div>
+  </div>
+
+  <!-- B -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">B</div>
+      <div>
+        <div class="dec-tag">Channel Management</div>
+        <div class="dec-title">All Channels Managed From One Table</div>
+        <div class="dec-desc">The Channels tab consolidates every communication channel under a single inbox - Facebook Messenger, Instagram, Salesmate Chat, Voice & Text, WhatsApp Twilio, and more. The status column (Connected / Pending) gives admins a clear at-a-glance view of what's active versus still in setup. Because access is now inherited from the inbox rather than set per-channel, adding a new channel doesn't require reconfiguring permissions - it just works.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Channels</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-03.png" alt="Channels - all channel types and connection statuses in one table" class="img-fluid">
+  <div class="sc-cap">Channels - all channel types and connection statuses in one table</div></div></div>
+  </div>
+
+  <!-- C -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">C</div>
+      <div>
+        <div class="dec-tag">AI Copilot Layer</div>
+        <div class="dec-title">AI Configured Per Inbox, Not Globally</div>
+        <div class="dec-desc">Copilot Settings let each inbox define its own AI behaviour independently - which channels Copilot is active on, what tone it uses (Formal / Casual / Humorous / Friendly / Matter-of-fact), how long its answers are (Descriptive / Standard / Concise), and which Knowledge Base it pulls from. This means a formal B2B sales inbox and a friendly retail support inbox can both use AI Copilot but with completely different personalities - within the same Salesmate account.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Copilot Settings</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-04.png" alt="Copilot Settings - channel selection, tone, answer length, and knowledge base per inbox" class="img-fluid">
+  <div class="sc-cap">Copilot Settings - channel selection, tone, answer length, and knowledge base per inbox</div></div></div>
+  </div>
+
+  <!-- D -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">D</div>
+      <div>
+        <div class="dec-tag">eCommerce AI Tools</div>
+        <div class="dec-title">A Full AI Retail Layer, Built Into the Inbox</div>
+        <div class="dec-desc">For eCommerce teams, I designed a dedicated Tools section extending the inbox with AI capabilities for online retail: Semantic AI Search (goes beyond keyword matching to understand query context), AI Suggestions for product pages (PDP), category pages, and CMS pages, AI Summarization of product details, AI Search Assist, and Contextual Suggestions to handle queries that fall outside configured tools. All powered by connecting a Shopify or BigCommerce store as the data source.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screens <span>- Tools & E-commerce Source</span></div>
+  <div class="sc-grid"><div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-05.png" alt="Tools - seven AI-powered eCommerce capabilities, each independently toggleable" class="img-fluid">
+  <div class="sc-cap">Tools - seven AI-powered eCommerce capabilities, each independently toggleable</div></div><div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
+  <img src="../assets/images/unified-inbox-v2-06.png" alt="E-commerce Source - connect Shopify or BigCommerce to power all AI tools" class="img-fluid">
+  <div class="sc-cap">E-commerce Source - connect Shopify or BigCommerce to power all AI tools</div></div></div></div>
+  </div>
+
+</section>
+
+<!-- 06 FEATURE DEPTH -->
+<div class="band">
+  <div class="bi">
+    <div class="sn">06</div>
+    <div class="bq">Beyond the core inbox - <span>a full feature system</span> for managing every edge case agents deal with daily.</div>
+    <div class="feat-list">
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Smart System Views</div>
+          <div class="feat-desc">Inbox, All, Me, My Team, Unassigned, Mentioned, Outbox, Scheduled, Sent, Failed - every agent and team lead gets the exact view they need with no setup.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Scheduled & Failed Messages</div>
+          <div class="feat-desc">Dedicated folders for scheduled and failed messages with a focused view that isolates the queued item - agents can reschedule, retry, or delete without disrupting other conversations.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Bulk Operations</div>
+          <div class="feat-desc">Select multiple conversations to close, reassign, mark as read/unread. In failed folders: bulk retry or delete. In scheduled folders: reschedule, send immediately, or delete.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Outbound Quick Creation Popup</div>
+          <div class="feat-desc">A unified composer for outbound messages across Email, Text, WhatsApp, and Chat - minimisable, movable, full-screen capable. One consistent experience regardless of channel.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Auto-Close AI Conversations</div>
+          <div class="feat-desc">Conversations owned by AI Pilot that go inactive for a configurable period close automatically with an optional closing message - keeping the inbox clean and resolution metrics accurate.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">TikTok Channel</div>
+          <div class="feat-desc">Phase 1 brings TikTok DMs into the unified inbox with contact auto-creation and conversation history. Phase 2 adds Flow automation triggered by incoming TikTok messages.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">Unread Count Customisation</div>
+          <div class="feat-desc">Users can configure which inboxes contribute to their sidebar unread badge, and whether it counts all conversations or only directly assigned ones - reducing notification fatigue.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-dot"></div>
+        <div>
+          <div class="feat-title">WhatsApp Contextual Replies</div>
+          <div class="feat-desc">Agents can reply to specific messages within WhatsApp threads, keeping context clear in busy conversations and enabling faster, more precise responses.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 07 OUTCOME -->
+<section>
+  <div class="sn">07</div>
+  <h2>Outcome</h2>
+  <p class="sb unified-inbox-v2-inline-04">The Unified Inbox shipped and is live. Users have responded positively since launch. The architectural shift from single-workspace to multi-inbox - with inbox-level access control and AI built in at every layer - made the product significantly easier to adopt, manage, and grow with.</p>
+  <div class="oc-cards">
+    <div class="oc-card">
+      <div class="oc-label">Live & Shipped</div>
+      <div class="oc-text">The Unified Inbox is in active use across Salesmate CRM and Skara. Positive user response confirmed since launch across chat, WhatsApp, Facebook, Instagram, and voice channels.</div>
+    </div>
+    <div class="oc-card">
+      <div class="oc-label">Simpler to Manage</div>
+      <div class="oc-text">Moving access control to inbox level - rather than per-channel - removed a significant admin burden. What previously required multiple configuration steps now takes one.</div>
+    </div>
+    <div class="oc-card">
+      <div class="oc-label">Scalable Architecture</div>
+      <div class="oc-text">The multi-inbox model scales naturally as teams grow. Sales, support, and marketing can each operate independently within the same account - no workarounds required.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Nitesh Jamod · 2025</div>
+  <a href="/" class="fn">Next Project →</a>
+</footer>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

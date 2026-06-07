@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI Pilot Builder — Case study by Nitesh Jamod. Designing a five-layer no-code system for building and deploying AI agents at Salesmate.">
+<meta name="theme-color" content="#F0EAE0">
+<meta property="og:title" content="AI Pilot Builder — Nitesh Jamod">
+<meta property="og:description" content="Five-layer no-code AI agent builder. Identity, Knowledge, Behaviour, Tools, Deployment. Shipped at Salesmate.">
+<meta property="og:url" content="https://niteshjamod.com/work/ai-pilot.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nitesh Jamod">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nitesh Jamod Portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Pilot Builder · Nitesh Jamod">
+<meta name="twitter:description" content="Five-layer no-code AI agent builder shipped at Salesmate.">
+<meta name="twitter:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta name="twitter:url" content="https://niteshjamod.com/work/ai-pilot.html">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<title>AI Pilot Builder · Nitesh Jamod</title>
+<link rel="icon" type="image/png" href="../assets/images/NJ_fav_icon.png">
+<link rel="canonical" href="https://niteshjamod.com/work/ai-pilot.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+@media (max-width: 900px) {
+  body.page-ai-pilot-case-study-final .hero,
+  body.page-ai-pilot-case-study-final section,
+  body.page-ai-pilot-case-study-final .problem-statement,
+  body.page-ai-pilot-case-study-final .outcome-section,
+  body.page-ai-pilot-case-study-final footer {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    overflow-x: hidden;
+  }
+
+  body.page-ai-pilot-case-study-final .hero-top,
+  body.page-ai-pilot-case-study-final .hero-left,
+  body.page-ai-pilot-case-study-final .hero-right,
+  body.page-ai-pilot-case-study-final .hero-subtitle,
+  body.page-ai-pilot-case-study-final .walkthrough-card,
+  body.page-ai-pilot-case-study-final .decision-block,
+  body.page-ai-pilot-case-study-final .graphic-wrap,
+  body.page-ai-pilot-case-study-final .hero-meta {
+    width: 100% !important;
+    max-width: calc(100vw - 48px) !important;
+    min-width: 0 !important;
+  }
+
+  body.page-ai-pilot-case-study-final .hero-subtitle,
+  body.page-ai-pilot-case-study-final .walkthrough-card p,
+  body.page-ai-pilot-case-study-final .decision-block p {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  body.page-ai-pilot-case-study-final .decision-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body.page-ai-pilot-case-study-final .hero-top,
+  body.page-ai-pilot-case-study-final .hero-left,
+  body.page-ai-pilot-case-study-final .hero-right,
+  body.page-ai-pilot-case-study-final .hero-subtitle,
+  body.page-ai-pilot-case-study-final .walkthrough-card,
+  body.page-ai-pilot-case-study-final .decision-block,
+  body.page-ai-pilot-case-study-final .graphic-wrap,
+  body.page-ai-pilot-case-study-final .hero-meta {
+    width: 342px !important;
+    max-width: 342px !important;
+  }
+}
+</style>
+</head>
+<body class="page-ai-pilot-case-study-final">
+
+<nav>
+  <a href="/" class="nav-logo">NJ</a>
+  <a href="/" class="nav-back">← Back to Work</a>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-top">
+    <div class="hero-left">
+      <div class="hero-label">Portfolio · Salesmate</div>
+      <h1 class="hero-title">No-Code<br><span>AI Agent</span><br>Builder</h1>
+      <p class="hero-subtitle">Designing a no-code tool that lets non-technical sales teams build, train, and deploy AI agents - without writing a single line of code.</p>
+    </div>
+
+    <!-- HERO NOTE: NDA-safe product context -->
+    <div class="hero-right ai-pilot-case-study-final-inline-01">
+      <div class="walkthrough-card hero-walkthrough-card">
+        <div class="walkthrough-kicker">Case Study Note</div>
+        <div class="walkthrough-title">Thinking over screenshots</div>
+        <p>This case study documents the thinking, decisions, and trade-offs behind the AI Agent Builder — not the interface itself.</p>
+        <p>The full product walkthrough is available in conversation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">Product Design Lead</div></div>
+    <div class="meta-item"><div class="meta-label">Timeline</div><div class="meta-value">3 Months</div></div>
+    <div class="meta-item"><div class="meta-label">Platform</div><div class="meta-value">Salesmate</div></div>
+    <div class="meta-item"><div class="meta-label">Tools</div><div class="meta-value">Figma Design · FigJam</div></div>
+  </div>
+</div>
+
+<!-- 01. OVERVIEW -->
+<section>
+  <div class="section-number">01</div>
+  <h2 class="section-title">Project Overview</h2>
+  <div class="overview-grid">
+    <div class="overview-cell"><div class="overview-cell-label">The Product</div><div class="overview-cell-value">Skara AI Agent Builder - part of Salesmate's AI Agents platform. A no-code tool for building and deploying AI agents across web, WhatsApp, SMS, and voice channels.</div></div>
+    <div class="overview-cell"><div class="overview-cell-label">The Goal</div><div class="overview-cell-value">Make AI agent setup accessible to non-technical sales managers - removing the dependency on developers for every new agent configuration.</div></div>
+    <div class="overview-cell"><div class="overview-cell-label">My Contribution</div><div class="overview-cell-value">End-to-end product design - user research, information architecture, high-fidelity UI, design system components, and developer handoff.</div></div>
+    <div class="overview-cell"><div class="overview-cell-label">Design System</div><div class="overview-cell-value">New components built on Salesmate's Global Design System and fed into sm-framework - Salesmate's internal Angular component library.</div></div>
+  </div>
+  <div class="context-box"><p>Salesmate customers wanted to use AI to automate support and sales conversations - but existing tools required coding knowledge or complex API setup. The goal was to abstract that complexity into a flow that felt like onboarding a new team member, not programming a system.</p></div>
+</section>
+
+<!-- 02. PROBLEM -->
+<div class="problem-statement">
+  <div class="ai-pilot-case-study-final-inline-03">
+    <div class="section-number">02</div>
+    <div class="problem-quote">"How might we help non-technical sales managers build, train, and deploy <span>safe AI agents</span> without writing a single line of code?"</div>
+    <div class="challenges-grid">
+      <div class="challenge-card"><div class="challenge-num">01 - COMPLEXITY</div><div class="challenge-title">AI is intimidating</div><div class="challenge-desc">Terms like "temperature," "tokens," and "system prompts" mean nothing to a sales manager. The interface needed to hide the technical layer entirely.</div></div>
+      <div class="challenge-card"><div class="challenge-num">02 - TRUST</div><div class="challenge-title">Fear of hallucination</div><div class="challenge-desc">Users were worried the AI would give wrong answers to their customers. They needed full visibility into what the agent "knows" before it goes live.</div></div>
+      <div class="challenge-card"><div class="challenge-num">03 - CONFIDENCE</div><div class="challenge-title">No way to test</div><div class="challenge-desc">Without a way to preview the agent's behaviour in real time, users had no confidence to deploy. Testing had to be built into the setup flow itself.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 03. PERSONAS -->
+<section class="ai-pilot-case-study-final-inline-04">
+  <div class="section-number">03</div>
+  <h2 class="section-title">User Personas</h2>
+  <div class="personas-grid">
+    <div class="persona-card">
+      <div class="persona-type">Primary User</div>
+      <div class="persona-name">The Sales Manager</div>
+      <div class="persona-row"><div class="persona-row-label">Goal</div><div class="persona-row-value">Automate repetitive FAQ responses to free up the team for higher-value conversations.</div></div>
+      <div class="persona-row"><div class="persona-row-label">Pain Point</div><div class="persona-row-value">Scared of breaking things. Doesn't know how to write prompts or configure AI settings.</div></div>
+      <div class="persona-row"><div class="persona-row-label">Need</div><div class="persona-row-value">A guardrail system - clear boundaries on what the agent can and cannot say, with full visibility before going live.</div></div>
+    </div>
+    <div class="persona-card">
+      <div class="persona-type">End User</div>
+      <div class="persona-name">The Website Visitor</div>
+      <div class="persona-row"><div class="persona-row-label">Goal</div><div class="persona-row-value">Get instant, accurate answers on pricing, availability, and product details.</div></div>
+      <div class="persona-row"><div class="persona-row-label">Pain Point</div><div class="persona-row-value">Frustrated by "dumb bots" that loop, give generic answers, or hand off too late.</div></div>
+      <div class="persona-row"><div class="persona-row-label">Need</div><div class="persona-row-value">A conversational experience that feels natural and knows when to hand off to a human.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04. FLOW -->
+<section class="ai-info-flow-section flow-architecture" aria-labelledby="information-flow-title">
+  <div class="flow-section-head">
+    <div class="flow-eyebrow">INFORMATION FLOW</div>
+    <h2 id="information-flow-title">How an AI Agent moves from identity definition to deployment through a structured five-layer architecture.</h2>
+    <p>The AI Pilot Builder is designed around five interconnected layers. Each layer adds context, intelligence, behavior, or execution capabilities until the agent becomes ready for production use.</p>
+  </div>
+
+  <div class="flow-diagram" aria-label="Five-layer AI Agent architecture flow">
+    <article class="flow-card" style="--i:0">
+      <div class="flow-card-top">
+        <span class="flow-num">01</span>
+        <span class="flow-name">IDENTITY</span>
+      </div>
+      <div class="flow-subtitle">The Who</div>
+      <p>The personality layer</p>
+      <div class="flow-pills">
+        <span>Agent Profile</span><span>Name</span><span>Avatar</span><span>Handle</span><span>Role Definition</span><span>Job Title</span><span>Tone of Voice</span><span>Goal</span><span>System Instructions</span>
+      </div>
+      <div class="flow-reveal">Defines who the agent is before it learns, responds, or takes action.</div>
+    </article>
+
+    <div class="flow-connector" aria-hidden="true" style="--i:1"><span></span></div>
+
+    <article class="flow-card" style="--i:2">
+      <div class="flow-card-top">
+        <span class="flow-num">02</span>
+        <span class="flow-name">KNOWLEDGE</span>
+      </div>
+      <div class="flow-subtitle">The Brain</div>
+      <p>The intelligence layer</p>
+      <div class="flow-pills">
+        <span>Website Crawler</span><span>Files</span><span>FAQs</span><span>Help Center</span><span>Google Drive</span><span>Knowledge Sources</span><span>Refresh Rules</span><span>Data Updates</span>
+      </div>
+      <div class="flow-reveal">Controls what the agent can reference, trust, refresh, and use in conversation.</div>
+    </article>
+
+    <div class="flow-connector" aria-hidden="true" style="--i:3"><span></span></div>
+
+    <article class="flow-card" style="--i:4">
+      <div class="flow-card-top">
+        <span class="flow-num">03</span>
+        <span class="flow-name">BEHAVIOR</span>
+      </div>
+      <div class="flow-subtitle">The Rules</div>
+      <p>The guardrail layer</p>
+      <div class="flow-pills">
+        <span>Response Logic</span><span>Routing Rules</span><span>Escalation Logic</span><span>Human Handoff</span><span>Business Hours</span><span>Availability</span><span>Privacy Controls</span><span>Security Policies</span>
+      </div>
+      <div class="flow-reveal">Shapes how the agent responds, when it stops, and when a human takes over.</div>
+    </article>
+
+    <div class="flow-connector" aria-hidden="true" style="--i:5"><span></span></div>
+
+    <article class="flow-card" style="--i:6">
+      <div class="flow-card-top">
+        <span class="flow-num">04</span>
+        <span class="flow-name">TOOLS &amp; ACTIONS</span>
+      </div>
+      <div class="flow-subtitle">The Hands</div>
+      <p>The execution layer</p>
+      <div class="flow-pills">
+        <span>CRM Actions</span><span>Contact Creation</span><span>Deal Updates</span><span>Email Sending</span><span>Meeting Scheduling</span><span>API Calls</span><span>Workflow Triggers</span><span>Third-party Integrations</span>
+      </div>
+      <div class="flow-reveal">Turns the agent from a responder into a system actor with controlled capabilities.</div>
+    </article>
+
+    <div class="flow-connector" aria-hidden="true" style="--i:7"><span></span></div>
+
+    <article class="flow-card" style="--i:8">
+      <div class="flow-card-top">
+        <span class="flow-num">05</span>
+        <span class="flow-name">DEPLOYMENT</span>
+      </div>
+      <div class="flow-subtitle">The Launch</div>
+      <p>The production layer</p>
+      <div class="flow-pills">
+        <span>Website Chat</span><span>Live Chat</span><span>WhatsApp</span><span>Email</span><span>Internal Workspace</span><span>Monitoring</span><span>Analytics</span><span>Performance Metrics</span>
+      </div>
+      <div class="flow-reveal">Decides where the agent operates and how teams monitor production performance.</div>
+    </article>
+  </div>
+
+  <div class="flow-summary">
+    <p>Identity defines who the agent is. Knowledge teaches what it knows. Behavior controls how it responds. Tools determine what it can do. Deployment decides where it operates.</p>
+    <p>Together these five layers transform a simple prompt into a production-ready AI agent.</p>
+  </div>
+</section>
+
+<!-- 05. SOLUTIONS -->
+<section class="ai-pilot-case-study-final-inline-09">
+  <div class="section-number">05</div>
+  <h2 class="section-title">Key Design Decisions</h2>
+  <div class="solutions-list">
+
+    <!-- Solution A -->
+    <div class="solution-item">
+      <div class="solution-letter">A</div>
+      <div class="solution-content">
+        <div class="solution-tag">The Hiring Mental Model</div>
+        <div class="solution-title">Talk Like a Manager, Not a Developer</div>
+        <div class="solution-desc">Instead of asking for a "system prompt," I designed fields for Role, Goal, and Tone - language the user already understands. The system translates these inputs into the technical configuration in the background. The user never sees that layer.</div>
+
+        <div class="decision-grid">
+          <div class="decision-block">
+            <div class="decision-label">Identity / Setup Tab</div>
+            <h3>What the user sees — and what they don't</h3>
+            <p>The Setup tab surfaces four fields: name, language, a plain-text identity instructions area, and a tone picker with five options — Formal, Casual, Humorous, Friendly, Matter-of-fact. That's it. No model selection. No temperature. No token limits.</p>
+            <p>The constraint was deliberate — a sales manager shouldn't have to understand what temperature means to build a working agent. The tone picker replaced the concept of a system prompt entirely. Users pick a personality. The platform handles the rest.</p>
+          </div>
+          <div class="decision-block">
+            <div class="decision-label">Hidden Layer</div>
+            <h3>The layer that doesn't exist for the user</h3>
+            <p>Behind the four-field Setup UI sits a full technical configuration layer — LLM model selection, temperature control, priority processing toggles, and context window management. Every decision made at that layer is invisible to the end user.</p>
+            <p>The design question wasn't how to present these settings — it was whether to present them at all. The answer was no. We made the decision once at the system level and removed the choice from the user entirely. That's not simplification — that's a deliberate product decision that required alignment across design, engineering, and the CEO.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution B -->
+    <div class="solution-item">
+      <div class="solution-letter">B</div>
+      <div class="solution-content">
+        <div class="solution-tag">The Knowledge Base</div>
+        <div class="solution-title">Show the Agent Exactly What It Knows</div>
+        <div class="solution-desc">To solve the trust problem, I designed a transparent file manager. Users can see every PDF, URL, and document the agent is reading from. If something is outdated or wrong, they can remove it instantly - giving them full control before going live.</div>
+
+        <div class="decision-grid">
+          <div class="decision-block">
+            <div class="decision-label">Knowledge Base Setup</div>
+            <h3>Giving the agent a brain — without a single line of code</h3>
+            <p>The Knowledge Base setup runs as a two-step flow: basic details first, then category selection. The category step uses a grid of pre-defined options — Getting Started, FAQs, Troubleshooting, Integrations, and others — so users don't start from a blank slate.</p>
+            <p>This was one of the more important UX decisions in the product: an empty state is the fastest way to lose a non-technical user. By showing categories rather than a blank text field, we gave users a framework to think within — and most filled it faster than any blank form would have allowed.</p>
+          </div>
+          <div class="decision-block">
+            <div class="decision-label">Article Editor with AI Controls</div>
+            <h3>Transparency at the article level</h3>
+            <p>Each article in the Knowledge Base carries two explicit controls: one for whether the AI Pilot can use it to answer customer questions, and one for whether AI Copilot can reference it to assist human agents. These aren't global settings — they live on every individual article.</p>
+            <p>That granularity was a direct response to the trust problem. Users needed to feel that they controlled what the agent knew, article by article, before they'd be willing to deploy it to real customers. The toggles are the product's trust mechanism — more than any other design decision in the flow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution C -->
+    <div class="solution-item">
+      <div class="solution-letter">C</div>
+      <div class="solution-content">
+        <div class="solution-tag">The Real-Time Playground</div>
+        <div class="solution-title">Test Before You Deploy</div>
+        <div class="solution-desc">A split-screen view: settings on the left, live chat preview on the right. Change the tone, the agent responds differently - immediately. This tight feedback loop let users experiment freely and build confidence before going live. No deployment anxiety.</div>
+
+        <div class="decision-block">
+          <div class="decision-label">Prompt Training & Testing</div>
+          <h3>The feedback loop that built confidence</h3>
+          <p>The Playground is a prompt training and testing interface. Users define System and User prompts, click Run, and see the AI Pilot's response immediately. The key design decision here was speed of feedback — the response had to appear fast enough that users felt they were having a conversation with the agent, not submitting a form and waiting.</p>
+          <p>That tight write → run → adjust loop is what turned a feature that initially felt intimidating into something users returned to repeatedly before deploying. We saw this in beta testing: users who spent time in the Playground deployed more confidently and requested fewer changes post-launch.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 06. DESIGN SYSTEM -->
+<section class="ai-pilot-case-study-final-inline-18">
+  <div class="section-number">06</div>
+  <h2 class="section-title">Design System</h2>
+  <p class="section-body">New components were built on top of Salesmate's Global Design System and fed into sm-framework - Salesmate's internal Angular component library documented in Storybook 8.</p>
+
+  <div class="ds-grid ai-pilot-case-study-final-inline-21">
+    <div class="ds-card"><div class="ds-card-label">Existing Foundation</div><div class="ds-card-title">Salesmate Global Design System</div><div class="ds-card-desc">Core inputs, buttons, modals, and typography tokens pulled from the existing global system - keeping the agent builder consistent with the rest of the Salesmate product.</div></div>
+    <div class="ds-card"><div class="ds-card-label">New Components</div><div class="ds-card-title">AI-Specific Patterns</div><div class="ds-card-desc">New UI patterns including AI status indicators, "agent thinking" loading states, knowledge base file cards, and confidence displays - all documented in Storybook 8 via sm-framework.</div></div>
+  </div>
+</section>
+
+<!-- 07. OUTCOME -->
+<div class="outcome-section">
+  <div class="outcome-inner">
+    <div class="section-number">07</div>
+    <div class="outcome-quote">"The success wasn't just in the UI - it was in the <span>abstraction.</span> We hid the complexity of AI behind a flow that felt like hiring a new team member."</div>
+    <div class="outcome-cards">
+      <div class="outcome-card"><div class="outcome-card-label">Self-Serve Setup</div><div class="outcome-card-text">Agent configuration moved from a developer-dependent process to something any sales manager can complete independently - no technical knowledge required.</div></div>
+      <div class="outcome-card"><div class="outcome-card-label">User Confidence</div><div class="outcome-card-text">The transparent knowledge base and real-time playground removed the fear of deployment. Users could see exactly what the agent knew and test it before going live.</div></div>
+      <div class="outcome-card"><div class="outcome-card-label">Scalable Architecture</div><div class="outcome-card-text">The five-layer architecture - Identity, Knowledge, Behavior, Tools, Deployment - scaled across eCommerce, retail, enterprise, and agency use cases without needing a redesign.</div></div>
+    </div>
+    <div class="walkthrough-card outcome-walkthrough-card">
+      <div class="walkthrough-kicker">Walkthrough Available</div>
+      <p>The full product — including live agent flows, edge case handling, and the decisions that didn't make it into this document — is something I walk through in conversation. If you'd like to go deeper, let's talk.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-label">Nitesh Jamod · 2025</div>
+  <a href="/" class="footer-next">Next Project <span>→</span></a>
+</footer>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

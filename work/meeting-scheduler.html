@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meeting Scheduler — Case study by Nitesh Jamod. No-code booking system for four meeting types with CRM sync and calendar integration.">
+<meta name="theme-color" content="#F0EAE0">
+<meta property="og:title" content="Meeting Scheduler — Nitesh Jamod">
+<meta property="og:description" content="No-code booking for One-to-One, Group, Team, and Round Robin meetings with automatic CRM activity creation.">
+<meta property="og:url" content="https://niteshjamod.com/work/meeting-scheduler.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nitesh Jamod">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nitesh Jamod Portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meeting Scheduler · Nitesh Jamod">
+<meta name="twitter:description" content="No-code booking for four meeting types with CRM and calendar sync.">
+<meta name="twitter:image" content="https://niteshjamod.com/assets/images/nitesh-jamod.jpg">
+<meta name="twitter:url" content="https://niteshjamod.com/work/meeting-scheduler.html">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<title>Meeting Scheduler · Nitesh Jamod</title>
+<link rel="icon" type="image/png" href="../assets/images/NJ_fav_icon.png">
+<link rel="canonical" href="https://niteshjamod.com/work/meeting-scheduler.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="page-meeting-scheduler-case-study">
+
+<nav>
+  <a href="/" class="nl">NJ</a>
+  <a href="/" class="nb">← Back to Work</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hbg"></div>
+  <div class="htop">
+    <div>
+      <div class="hl">Portfolio · Salesmate</div>
+      <h1>Meeting<br><span>Scheduler</span></h1>
+      <p class="hsub">Eliminating the back-and-forth of email scheduling - a no-code booking system for one-on-one, group, team, and round-robin meetings, shareable anywhere.</p>
+    </div>
+    <div class="hero-right">
+      <div class="sc-wrap">
+  <div class="sc-wrap-label">End-user booking page <span>- What your customers see</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-01.png" alt="Customer-facing booking page - conference call with date picker and available timeslots" class="img-fluid">
+  <div class="sc-cap">Customer-facing booking page - conference call with date picker and available timeslots</div></div></div>
+    </div>
+  </div>
+  <div class="hm">
+    <div><div class="ml">Role</div><div class="mv">Product Design Lead</div></div>
+    <div><div class="ml">Platform</div><div class="mv">Salesmate CRM · Web</div></div>
+    <div><div class="ml">Collaboration</div><div class="mv">CEO-direct</div></div>
+    <div><div class="ml">Status</div><div class="mv">Live · Shipped</div></div>
+    <div><div class="ml">Tools</div><div class="mv">Figma Design · FigJam</div></div>
+  </div>
+</div>
+
+<!-- 01 OVERVIEW -->
+<section>
+  <div class="sn">01</div>
+  <h2>Overview</h2>
+  <p class="sb">Meeting Scheduler lets Salesmate users create shareable booking pages that connect directly to their calendar. Contacts book meetings at available times without any email back-and-forth. Each booking automatically creates a CRM activity, tags it, and syncs to the user's connected calendar.</p>
+  <p class="sb meeting-scheduler-case-study-inline-01">The product supports four distinct meeting types - each with shared core fields and type-specific configuration. It also integrates deeply into Salesmate's email composer, embeds into external websites, and connects to video conferencing tools like Zoom, Google Meet, and Microsoft Teams.</p>
+</section>
+
+<!-- 02 THE PROBLEM -->
+<div class="band">
+  <div class="bi">
+    <div class="sn">02</div>
+    <div class="bq">Scheduling a meeting still meant <span>five emails back and forth</span> - "Does Tuesday work?" "I'm busy." "How about Thursday?" "What time zone are you in?"</div>
+    <div class="pg">
+      <div class="pc">
+        <div class="pn">01 - FRICTION</div>
+        <div class="pt">Email scheduling loops</div>
+        <div class="pd">Every meeting required manual coordination - proposing times, waiting for replies, adjusting for time zones. For sales teams booking demos all day, this was a constant drain.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">02 - CONTEXT LOSS</div>
+        <div class="pt">No CRM connection</div>
+        <div class="pd">When meetings were booked through external tools (Calendly etc.), the data lived outside the CRM. No activity record, no tags, no automation triggers, no pipeline visibility.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">03 - TEAM COMPLEXITY</div>
+        <div class="pt">No team booking logic</div>
+        <div class="pd">Distributing demo bookings across a sales team - fairly, based on priority or equal distribution - was handled manually or not at all. No system existed to automate it.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 MEETING TYPES -->
+<section>
+  <div class="sn">03</div>
+  <h2>Four Meeting Types</h2>
+  <p class="sb">One product, four distinct booking models. The core fields (name, description, URL, location, duration, availability) are shared across all types. What differs is who attends, how slots are allocated, and what the availability logic checks.</p>
+  <div class="types">
+    <div class="type">
+      <div class="type-num">01</div>
+      <div class="type-title">One-to-One</div>
+      <div class="type-desc">Standard 1:1 meeting between the scheduler owner and one contact. The most common type - product demos, sales calls, support sessions.</div>
+      <div class="type-rule">Availability checks the owner's calendar only. Owner name shown as headline on booking page.</div>
+    </div>
+    <div class="type">
+      <div class="type-num">02</div>
+      <div class="type-title">Group</div>
+      <div class="type-desc">Webinar-style: one time slot, multiple invitees. Set a max attendee limit. Show or hide remaining spots to create booking urgency.</div>
+      <div class="type-rule">Participants added to one existing activity. ICS sent individually per attendee. Spots tracked in activity title: "Angular Webinar (3 of 50 filled)".</div>
+    </div>
+    <div class="type">
+      <div class="type-num">03</div>
+      <div class="type-title">Team Meeting</div>
+      <div class="type-desc">Multiple team members attend every meeting with the contact - useful for product demos with a sales + technical rep present.</div>
+      <div class="type-rule">ALL teammates must be free for a slot to appear. Disabled teammates are excluded from availability checks automatically.</div>
+    </div>
+    <div class="type">
+      <div class="type-num">04</div>
+      <div class="type-title">Round Robin</div>
+      <div class="type-desc">Distributes bookings across a team. Two policies: Priority (assign by numbered rank) or Equal Distribution (balance evenly across teammates).</div>
+      <div class="type-rule">Equal distribution monitors booking counts per person - hides over-booked members until others catch up. Disabled users automatically skipped.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 DESIGN DECISIONS -->
+<section class="meeting-scheduler-case-study-inline-02">
+  <div class="sn">04</div>
+  <h2>Design Decisions</h2>
+
+  <!-- A: Core form -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">A</div>
+      <div>
+        <div class="dec-tag">Configuration</div>
+        <div class="dec-title">One Shared Form, Type-Specific Extensions</div>
+        <div class="dec-desc">All four meeting types share the same core form structure - Meeting Name, Description, URL, Location, Activity Type, Tags, and Company Logo. Type-specific fields appear only when relevant: Group meetings add "Max invitees" and "Display remaining spots". Team and Round Robin meetings add "Select Teammates". This kept the form predictable regardless of meeting type, and made it easy to understand what makes each type different at a glance. The Meeting URL field auto-generates from the meeting name, with a live preview of the full URL as you type - permanent once saved, never changeable after creation.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screens <span>- One-to-One form (basic) + Phone Call location expanded</span></div>
+  <div class="sc-grid"><div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-02.png" alt="Add One-to-One Meeting - core form: name, description, URL, location, activity type, tags" class="img-fluid">
+  <div class="sc-cap">Add One-to-One Meeting - core form: name, description, URL, location, activity type, tags</div></div><div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-03.png" alt="Phone Call location expanded - "I will call invitee" vs "My invitee should call me" with logo options" class="img-fluid">
+  <div class="sc-cap">Phone Call location expanded - "I will call invitee" vs "My invitee should call me" with logo options</div></div></div></div>
+  </div>
+
+  <!-- B: Location -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">B</div>
+      <div>
+        <div class="dec-tag">Meeting Location</div>
+        <div class="dec-title">Location Clarifies Who Does What</div>
+        <div class="dec-desc">The Location field goes beyond "where" - it defines the logistics of the meeting. Options include In Person (with a venue text field), Phone Call with a critical sub-choice: "I will call invitee" (makes phone number required on the booking form) vs "My invitee should call me" (puts the host's number in the calendar event description). Video conferencing tools - Zoom, Google Meet, Microsoft Teams - appear here if enabled on the account. Each option generates the right information in the right place in the calendar event, so nothing needs to be communicated separately after booking.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C: Round Robin -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">C</div>
+      <div>
+        <div class="dec-tag">Team Booking Logic</div>
+        <div class="dec-title">Round Robin - Fairness Built Into the System</div>
+        <div class="dec-desc">Round Robin was the most complex booking type to design because it introduces distribution logic the user needs to understand and configure. Two policies: Priority assigns meetings to team members in a numbered order (1 gets first, then 2, etc.); Equal Distribution monitors how many bookings each person has received and hides over-booked members from the booking page until others catch up. The teammate picker uses avatar tags for quick visual confirmation of who's included. Disabled users are automatically excluded from availability and distribution - no manual management required when someone leaves.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Round Robin setup with teammates selected</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-04.png" alt="Add Round-Robin Meeting - teammates picker with Samual Elkinson, John Deo, Allison Gouse, Zaire George selected" class="img-fluid">
+  <div class="sc-cap">Add Round-Robin Meeting - teammates picker with Samual Elkinson, John Deo, Allison Gouse, Zaire George selected</div></div></div>
+  </div>
+
+  <!-- D: Booking page -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">D</div>
+      <div>
+        <div class="dec-tag">End-User Experience</div>
+        <div class="dec-title">The Booking Page - Designed for the Contact, Not the Rep</div>
+        <div class="dec-desc">The customer-facing booking page is the most important screen in the product - it's what converts a lead into a scheduled meeting. The layout is a clean three-column design: meeting details on the left (name, duration, description), date picker in the centre, available timeslots on the right. The contact picks a date, sees available slots update in real time, selects a time, and confirms. Timezone is displayed and switchable. The "Powered by Salesmate" footer is shown only on the public booking page - contacts see a professional, distraction-free booking experience. A Troubleshoot Mode is available for admins - visible only to them, never to contacts - to diagnose why certain timeslots aren't showing.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Customer-facing booking page</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-05.png" alt="End-user booking page - Conference Call · 30 mins · calendar date picker · available timeslot list · timezone selector" class="img-fluid">
+  <div class="sc-cap">End-user booking page - Conference Call · 30 mins · calendar date picker · available timeslot list · timezone selector</div></div></div>
+  </div>
+
+  <!-- E: Email sharing -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">E</div>
+      <div>
+        <div class="dec-tag">Sharing</div>
+        <div class="dec-title">Two Ways to Share - Link or Specific Timeslots</div>
+        <div class="dec-desc">Inside Salesmate's email composer, a Meeting Scheduler button opens a picker with two distinct sharing options per scheduler. "Select meeting scheduler" inserts a booking link directly into the email body - the contact clicks and books at their convenience. "Pick time" opens a weekly calendar view where the rep selects up to 3 specific available slots and inserts them as clickable time proposals in the email - the contact clicks their preferred time and it's instantly booked. Grey slots are unavailable (already booked or the user is busy). Timezone is handled automatically - if the meeting scheduler timezone differs from the user's, the displayed times are adjusted accordingly.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Time Proposals calendar in email composer</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-06.png" alt="Time Proposals modal - weekly calendar view for picking up to 3 timeslots to insert into email" class="img-fluid">
+  <div class="sc-cap">Time Proposals modal - weekly calendar view for picking up to 3 timeslots to insert into email</div></div></div>
+  </div>
+
+  <!-- F: Embed -->
+  <div class="dec">
+    <div class="dec-hdr">
+      <div class="dec-ltr">F</div>
+      <div>
+        <div class="dec-tag">Distribution</div>
+        <div class="dec-title">Embed Anywhere - With Brand Customisation</div>
+        <div class="dec-desc">The Share Meeting modal provides both a public URL and an embeddable code snippet. The embed is customisable - background colour, text colour, and button/link colour are all editable with colour pickers, with a live preview of the script output. This allows teams to embed the booking widget directly on their website or landing page in brand colours, without any developer work beyond copy-pasting the script tag. Other sharing actions available from the listing: Copy Link, Clone, Change Owner, Enable/Disable, and Delete.</div>
+      </div>
+    </div>
+    <div class="sc-wrap">
+  <div class="sc-wrap-label">Screen <span>- Share Meeting modal with embed code and style customisation</span></div>
+  <div class="sc">
+  <div class="sc-bar"><span></span><span></span><span></span>
+  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
+  <img src="../assets/images/meeting-scheduler-case-study-07.png" alt="Share Meeting - public URL + customisable embed code with background, text, and button colour pickers" class="img-fluid">
+  <div class="sc-cap">Share Meeting - public URL + customisable embed code with background, text, and button colour pickers</div></div></div>
+  </div>
+
+</section>
+
+<!-- 05 FEATURE DEPTH -->
+<div class="band">
+  <div class="bi">
+    <div class="sn">05</div>
+    <div class="bq">Every booking <span>creates a CRM record</span> automatically - activity, tags, contact, and calendar event - with no manual entry required.</div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Auto CRM Activity Creation</div>
+        <div class="fd">Every booked meeting creates a Salesmate activity with the selected activity type (Event, Call, etc.) and any configured tags - enabling workflow automation and pipeline segmentation.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Calendar Sync</div>
+        <div class="fd">Booked meetings sync to the user's connected calendar (Google, Outlook). For Team meetings, all teammates get a calendar event. Group meeting attendees receive an ICS file individually.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Video Conferencing Integration</div>
+        <div class="fd">Zoom, Google Meet, and Microsoft Teams appear as location options when enabled. The meeting link is automatically added to the calendar event description upon booking.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Customise Greetings</div>
+        <div class="fd">Each user can customise their scheduler landing page - title (with variable substitution e.g. owner name), description, and company logo from Brand Book or custom upload.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Listing Actions</div>
+        <div class="fd">From the scheduler listing: Edit, Clone, Copy Link, Embed, Change Owner, Enable/Disable, Delete. Clone allows teams to duplicate a working scheduler as a starting point.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Troubleshoot Mode</div>
+        <div class="fd">Admins can view a troubleshoot overlay on the booking page to diagnose why certain dates or timeslots aren't appearing - invisible to contacts, accessible only to the authenticated user.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">AI Pilot Integration</div>
+        <div class="fd">Meeting Scheduler is available as a pre-built tool inside AI Pilots - agents can check availability, select a scheduler based on conversation context, and book meetings directly in chat.</div></div>
+      </div>
+      <div class="feat">
+        <div class="fdot"></div>
+        <div><div class="ft">Plan-Based Access Control</div>
+        <div class="fd">Team Booking (Team + Round Robin types) and Group Booking are plan-gated features. Unavailable types show as disabled with tooltips rather than hidden - transparent upgrade prompts.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 OUTCOME -->
+<section>
+  <div class="sn">06</div>
+  <h2>Outcome</h2>
+  <p class="sb meeting-scheduler-case-study-inline-03">Meeting Scheduler is live and in active use across Salesmate. Sales teams can share booking links via email, embed them on websites, or use them inside AI agent conversations - all with automatic CRM activity creation and calendar sync on every booking.</p>
+  <div class="oc-cards">
+    <div class="oc-card">
+      <div class="oc-label">Zero Email Back-and-Forth</div>
+      <div class="oc-text">Contacts book directly from a shareable link or calendar embed. No email chains, no time zone confusion, no manual follow-up. The booking confirms everything automatically.</div>
+    </div>
+    <div class="oc-card">
+      <div class="oc-label">Every Booking in the CRM</div>
+      <div class="oc-text">Each booked meeting creates an activity with the right type, tags, and contact association - immediately available for pipeline reporting, automation triggers, and team visibility.</div>
+    </div>
+    <div class="oc-card">
+      <div class="oc-label">Team Booking at Scale</div>
+      <div class="oc-text">Round Robin and Team meeting types make demo distribution and multi-rep calls manageable - with built-in fairness logic and automatic handling of disabled or over-booked team members.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Nitesh Jamod · 2025</div>
+  <a href="/" class="fn">Next Project →</a>
+</footer>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

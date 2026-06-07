@@ -47,13 +47,10 @@
       <p class="hsub">Eliminating the back-and-forth of email scheduling - a no-code booking system for one-on-one, group, team, and round-robin meetings, shareable anywhere.</p>
     </div>
     <div class="hero-right">
-      <div class="sc-wrap">
-  <div class="sc-wrap-label">End-user booking page <span>- What your customers see</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-01.png" alt="Customer-facing booking page - conference call with date picker and available timeslots" class="img-fluid">
-  <div class="sc-cap">Customer-facing booking page - conference call with date picker and available timeslots</div></div></div>
+      <div class="meeting-walkthrough-card">
+        <div class="meeting-walkthrough-label">Live product walkthrough</div>
+        <p>This case study documents the architecture and design decisions behind Meeting Scheduler. The live product - including booking pages, time proposals, team scheduling logic, embed flows, and CRM automation - is available to walk through in conversation.</p>
+      </div>
     </div>
   </div>
   <div class="hm">
@@ -131,9 +128,145 @@
   </div>
 </section>
 
-<!-- 04 DESIGN DECISIONS -->
+<!-- 04 INFORMATION FLOW -->
+<section class="meeting-flow-section flow-architecture" aria-labelledby="meeting-flow-title">
+  <div class="meeting-flow-head">
+    <div class="meeting-flow-kicker">INFORMATION FLOW</div>
+    <h2 id="meeting-flow-title">How a meeting moves from availability setup to a confirmed CRM activity.</h2>
+    <p>Meeting Scheduler is built as a multi-layer booking system. Every meeting passes through configuration, availability checks, booking experience, integrations, and CRM automation before becoming a confirmed event.</p>
+  </div>
+
+  <div class="meeting-flow-stack" aria-label="Meeting Scheduler layered booking architecture">
+    <article class="meeting-flow-row" style="--i:0">
+      <div class="meeting-flow-rail"><span>01</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 01</span>
+          <strong>SCHEDULER SETUP</strong>
+        </div>
+        <p>The configuration layer where the scheduler gets its identity, rules, and CRM context.</p>
+        <div class="meeting-flow-pills">
+          <span>Meeting Name</span><span>Description</span><span>URL</span><span>Duration</span><span>Location</span><span>Activity Type</span><span>Tags</span>
+        </div>
+        <div class="meeting-flow-reveal">Setup defines what the booking page represents, where the meeting happens, and how the resulting activity should be classified in CRM.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:1">
+      <div class="meeting-flow-rail"><span>02</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 02</span>
+          <strong>MEETING TYPES</strong>
+        </div>
+        <p>The booking model that determines who attends and how availability should be calculated.</p>
+        <div class="meeting-flow-pills">
+          <span>One-to-One</span><span>Group</span><span>Team</span><span>Round Robin</span>
+        </div>
+        <div class="meeting-flow-reveal">Each type shares the same foundation but changes the scheduling logic: single owner, multiple attendees, all teammates, or distributed ownership.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:2">
+      <div class="meeting-flow-rail"><span>03</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 03</span>
+          <strong>AVAILABILITY ENGINE</strong>
+        </div>
+        <p>The rules layer that decides which slots are safe to show to a contact.</p>
+        <div class="meeting-flow-pills">
+          <span>Working Hours</span><span>Calendar Sync</span><span>Timezone Rules</span><span>Team Availability</span><span>Distribution Logic</span>
+        </div>
+        <div class="meeting-flow-reveal">The engine filters busy calendars, timezone differences, team constraints, and fairness rules before a time slot appears on the booking page.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:3">
+      <div class="meeting-flow-rail"><span>04</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 04</span>
+          <strong>BOOKING EXPERIENCE</strong>
+        </div>
+        <p>The public flow where the contact selects a date, picks a time, and confirms details.</p>
+        <div class="meeting-flow-pills">
+          <span>Meeting Details</span><span>Date Selection</span><span>Time Selection</span><span>Contact Form</span><span>Confirmation</span>
+        </div>
+        <div class="meeting-flow-reveal">The customer-facing experience compresses complex scheduling logic into a simple sequence: understand, choose, provide details, confirm.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:4">
+      <div class="meeting-flow-rail"><span>05</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 05</span>
+          <strong>DISTRIBUTION CHANNELS</strong>
+        </div>
+        <p>The ways a scheduler can reach customers across sales, marketing, and AI-led workflows.</p>
+        <div class="meeting-flow-pills">
+          <span>Shareable Link</span><span>Email Sharing</span><span>Time Proposals</span><span>Website Embed</span><span>AI Pilot Booking</span>
+        </div>
+        <div class="meeting-flow-reveal">A meeting can be booked from a direct link, email composer, proposed slots, an embedded page, or an AI Pilot conversation.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:5">
+      <div class="meeting-flow-rail"><span>06</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 06</span>
+          <strong>INTEGRATIONS</strong>
+        </div>
+        <p>The external tools that keep calendar events and meeting links synchronized.</p>
+        <div class="meeting-flow-pills">
+          <span>Google Calendar</span><span>Outlook</span><span>Zoom</span><span>Google Meet</span><span>Microsoft Teams</span>
+        </div>
+        <div class="meeting-flow-reveal">Calendar and video integrations turn the selected slot into a real event with the right conferencing details attached automatically.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:6">
+      <div class="meeting-flow-rail"><span>07</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 07</span>
+          <strong>CRM AUTOMATION</strong>
+        </div>
+        <p>The internal system layer that converts a booking into CRM work.</p>
+        <div class="meeting-flow-pills">
+          <span>Activity Creation</span><span>Contact Association</span><span>Tags</span><span>Workflow Triggers</span><span>Calendar Events</span>
+        </div>
+        <div class="meeting-flow-reveal">Once booked, the meeting becomes a Salesmate activity with the right contact, tags, owner, activity type, and automation hooks.</div>
+      </div>
+    </article>
+
+    <article class="meeting-flow-row" style="--i:7">
+      <div class="meeting-flow-rail"><span>08</span></div>
+      <div class="meeting-flow-card" tabindex="0">
+        <div class="meeting-flow-card-top">
+          <span>Layer 08</span>
+          <strong>MEETING OUTCOME</strong>
+        </div>
+        <p>The confirmed state where the booking is visible, synchronized, and ready for follow-up.</p>
+        <div class="meeting-flow-pills">
+          <span>Confirmed Meeting</span><span>CRM Record</span><span>Calendar Sync</span><span>Team Visibility</span><span>Automation Ready</span>
+        </div>
+        <div class="meeting-flow-reveal">The final outcome is not just a calendar invite. It is a CRM-native event that can be tracked, reported on, and used in workflows.</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="meeting-flow-summary">
+    <p>Configure availability. Select meeting type. Validate scheduling rules. Book through any channel. Sync with external tools. Create CRM records automatically.</p>
+    <p>A simple booking experience powered by a deeply connected scheduling architecture.</p>
+  </div>
+</section>
+
+<!-- 05 DESIGN DECISIONS -->
 <section class="meeting-scheduler-case-study-inline-02">
-  <div class="sn">04</div>
+  <div class="sn">05</div>
   <h2>Design Decisions</h2>
 
   <!-- A: Core form -->
@@ -143,20 +276,15 @@
       <div>
         <div class="dec-tag">Configuration</div>
         <div class="dec-title">One Shared Form, Type-Specific Extensions</div>
-        <div class="dec-desc">All four meeting types share the same core form structure - Meeting Name, Description, URL, Location, Activity Type, Tags, and Company Logo. Type-specific fields appear only when relevant: Group meetings add "Max invitees" and "Display remaining spots". Team and Round Robin meetings add "Select Teammates". This kept the form predictable regardless of meeting type, and made it easy to understand what makes each type different at a glance. The Meeting URL field auto-generates from the meeting name, with a live preview of the full URL as you type - permanent once saved, never changeable after creation.</div>
+        <div class="dec-desc">The setup form needed to feel consistent across all meeting types while still making room for rules that only apply to certain booking models.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screens <span>- One-to-One form (basic) + Phone Call location expanded</span></div>
-  <div class="sc-grid"><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-02.png" alt="Add One-to-One Meeting - core form: name, description, URL, location, activity type, tags" class="img-fluid">
-  <div class="sc-cap">Add One-to-One Meeting - core form: name, description, URL, location, activity type, tags</div></div><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-03.png" alt="Phone Call location expanded - "I will call invitee" vs "My invitee should call me" with logo options" class="img-fluid">
-  <div class="sc-cap">Phone Call location expanded - "I will call invitee" vs "My invitee should call me" with logo options</div></div></div></div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">A predictable form with conditional complexity underneath</div>
+      <p>All four meeting types share the same foundation: meeting name, description, URL, duration, location, activity type, tags, and branding. That consistency matters because users often create more than one scheduler. Once they understand one form, the next setup should feel familiar.</p>
+      <p>The complexity appears only when it becomes relevant. Group meetings introduce attendee limits and remaining-spots visibility. Team and Round Robin meetings introduce teammate selection. Location choices expand into their own logistics, especially phone calls, where the product needs to know who is responsible for initiating the call.</p>
+      <p>The Meeting URL is generated from the meeting name with a live preview before saving, then locked after creation. That constraint prevents broken shared links later. It is a small interaction detail, but it protects every downstream channel where that link may already be used.</p>
+    </div>
   </div>
 
   <!-- B: Location -->
@@ -166,8 +294,14 @@
       <div>
         <div class="dec-tag">Meeting Location</div>
         <div class="dec-title">Location Clarifies Who Does What</div>
-        <div class="dec-desc">The Location field goes beyond "where" - it defines the logistics of the meeting. Options include In Person (with a venue text field), Phone Call with a critical sub-choice: "I will call invitee" (makes phone number required on the booking form) vs "My invitee should call me" (puts the host's number in the calendar event description). Video conferencing tools - Zoom, Google Meet, Microsoft Teams - appear here if enabled on the account. Each option generates the right information in the right place in the calendar event, so nothing needs to be communicated separately after booking.</div>
+        <div class="dec-desc">Location is not just a field. It determines what information needs to be collected, what gets written into the calendar event, and what the contact needs to do next.</div>
       </div>
+    </div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">Location as logistics, not decoration</div>
+      <p>The location control had to answer a practical question: after the meeting is booked, does everyone know exactly what to do? In-person meetings need a venue. Video meetings need the right conferencing provider. Phone calls need a decision about who calls whom.</p>
+      <p>That phone-call branch was especially important. If the rep will call the invitee, the booking form must collect a phone number. If the invitee should call the rep, the host's number belongs in the calendar event description. Those are different workflows, even though they both look like "Phone Call" at a high level.</p>
+      <p>The design treats location as a rule-setting moment. Each choice generates the correct downstream event details so the user does not need to explain logistics manually after the booking is confirmed.</p>
     </div>
   </div>
 
@@ -178,16 +312,15 @@
       <div>
         <div class="dec-tag">Team Booking Logic</div>
         <div class="dec-title">Round Robin - Fairness Built Into the System</div>
-        <div class="dec-desc">Round Robin was the most complex booking type to design because it introduces distribution logic the user needs to understand and configure. Two policies: Priority assigns meetings to team members in a numbered order (1 gets first, then 2, etc.); Equal Distribution monitors how many bookings each person has received and hides over-booked members from the booking page until others catch up. The teammate picker uses avatar tags for quick visual confirmation of who's included. Disabled users are automatically excluded from availability and distribution - no manual management required when someone leaves.</div>
+        <div class="dec-desc">Round Robin introduced the hardest system behavior in the product: assigning meetings fairly while keeping the setup understandable.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Round Robin setup with teammates selected</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-04.png" alt="Add Round-Robin Meeting - teammates picker with Samual Elkinson, John Deo, Allison Gouse, Zaire George selected" class="img-fluid">
-  <div class="sc-cap">Add Round-Robin Meeting - teammates picker with Samual Elkinson, John Deo, Allison Gouse, Zaire George selected</div></div></div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">Fairness needed to be configurable, visible, and automatic</div>
+      <p>Round Robin was the most complex booking type because it asks the product to make assignment decisions on behalf of the team. The user needed to understand not only who is included, but how the system will choose the next owner.</p>
+      <p>I separated the logic into two policies. Priority gives teams a ranked order for assignment. Equal Distribution watches booking counts and holds back over-booked members until others catch up. These are very different mental models, so they needed to be expressed plainly rather than hidden behind one generic "auto assign" setting.</p>
+      <p>Disabled users are automatically excluded from availability and distribution. That was an important operational detail: the scheduler should continue working when a teammate leaves or becomes inactive, without forcing admins to audit every booking page manually.</p>
+    </div>
   </div>
 
   <!-- D: Booking page -->
@@ -197,16 +330,15 @@
       <div>
         <div class="dec-tag">End-User Experience</div>
         <div class="dec-title">The Booking Page - Designed for the Contact, Not the Rep</div>
-        <div class="dec-desc">The customer-facing booking page is the most important screen in the product - it's what converts a lead into a scheduled meeting. The layout is a clean three-column design: meeting details on the left (name, duration, description), date picker in the centre, available timeslots on the right. The contact picks a date, sees available slots update in real time, selects a time, and confirms. Timezone is displayed and switchable. The "Powered by Salesmate" footer is shown only on the public booking page - contacts see a professional, distraction-free booking experience. A Troubleshoot Mode is available for admins - visible only to them, never to contacts - to diagnose why certain timeslots aren't showing.</div>
+        <div class="dec-desc">The booking page had to make a complex scheduling engine feel effortless to the contact choosing a time.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Customer-facing booking page</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-05.png" alt="End-user booking page - Conference Call · 30 mins · calendar date picker · available timeslot list · timezone selector" class="img-fluid">
-  <div class="sc-cap">End-user booking page - Conference Call · 30 mins · calendar date picker · available timeslot list · timezone selector</div></div></div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">A public booking page that hides system complexity</div>
+      <p>The customer-facing page is where the product either earns trust or creates friction. The contact should not need to understand calendars, round-robin logic, team constraints, or CRM activity creation. They should only need to understand the meeting, choose a date, pick a time, and confirm.</p>
+      <p>The experience is structured around that sequence: meeting details first, then date selection, then available slots, then confirmation. Timezone is visible and changeable because scheduling confidence depends on knowing exactly what time is being booked.</p>
+      <p>Troubleshoot Mode sits behind the scenes for admins. It helps explain why certain slots are unavailable, but it never appears to contacts. That separation keeps the public experience clean while still giving internal teams a way to diagnose availability issues.</p>
+    </div>
   </div>
 
   <!-- E: Email sharing -->
@@ -216,16 +348,15 @@
       <div>
         <div class="dec-tag">Sharing</div>
         <div class="dec-title">Two Ways to Share - Link or Specific Timeslots</div>
-        <div class="dec-desc">Inside Salesmate's email composer, a Meeting Scheduler button opens a picker with two distinct sharing options per scheduler. "Select meeting scheduler" inserts a booking link directly into the email body - the contact clicks and books at their convenience. "Pick time" opens a weekly calendar view where the rep selects up to 3 specific available slots and inserts them as clickable time proposals in the email - the contact clicks their preferred time and it's instantly booked. Grey slots are unavailable (already booked or the user is busy). Timezone is handled automatically - if the meeting scheduler timezone differs from the user's, the displayed times are adjusted accordingly.</div>
+        <div class="dec-desc">Sharing needed to support both self-serve booking and guided sales conversations where a rep proposes specific times.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Time Proposals calendar in email composer</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-06.png" alt="Time Proposals modal - weekly calendar view for picking up to 3 timeslots to insert into email" class="img-fluid">
-  <div class="sc-cap">Time Proposals modal - weekly calendar view for picking up to 3 timeslots to insert into email</div></div></div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">One scheduler, two sharing behaviors</div>
+      <p>Inside the email composer, the Meeting Scheduler entry point supports two different sales behaviors. A rep can insert the booking link and let the contact choose any available slot, or they can pick up to three specific times and insert them as clickable proposals.</p>
+      <p>The second flow is important because sales conversations are often guided. A rep may want to suggest a narrow set of strong options instead of handing over a full booking page. The weekly picker exposes available and unavailable slots clearly, so the rep can choose times without accidentally proposing a conflict.</p>
+      <p>Timezone handling happens automatically. If the scheduler timezone differs from the user's, displayed times are adjusted before they are inserted into the email. The design reduces back-and-forth without making the rep do mental conversion work.</p>
+    </div>
   </div>
 
   <!-- F: Embed -->
@@ -235,24 +366,23 @@
       <div>
         <div class="dec-tag">Distribution</div>
         <div class="dec-title">Embed Anywhere - With Brand Customisation</div>
-        <div class="dec-desc">The Share Meeting modal provides both a public URL and an embeddable code snippet. The embed is customisable - background colour, text colour, and button/link colour are all editable with colour pickers, with a live preview of the script output. This allows teams to embed the booking widget directly on their website or landing page in brand colours, without any developer work beyond copy-pasting the script tag. Other sharing actions available from the listing: Copy Link, Clone, Change Owner, Enable/Disable, and Delete.</div>
+        <div class="dec-desc">The scheduler needed to work beyond Salesmate: in emails, on websites, in landing pages, and anywhere a team wants to convert intent into a booked meeting.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Share Meeting modal with embed code and style customisation</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Meeting Scheduler</div></div>
-  <img src="../assets/images/meeting-scheduler-case-study-07.png" alt="Share Meeting - public URL + customisable embed code with background, text, and button colour pickers" class="img-fluid">
-  <div class="sc-cap">Share Meeting - public URL + customisable embed code with background, text, and button colour pickers</div></div></div>
+    <div class="meeting-decision-note">
+      <div class="meeting-decision-note-label">Distribution without losing brand control</div>
+      <p>The Share Meeting model gives teams both a public URL and an embeddable script. That made the scheduler useful in more contexts: sales emails, marketing pages, partner landing pages, and support workflows.</p>
+      <p>Embedding introduced a design constraint: the booking widget could not feel visually foreign on a customer's website. The embed settings allow background, text, and button/link colors to be customized, with a live preview of the generated code. The goal was to keep implementation simple while still giving teams enough brand control to use it publicly.</p>
+      <p>The surrounding actions - copy link, clone, change owner, enable or disable, and delete - make distribution operationally manageable. A scheduler is not just a page; it becomes a reusable asset that teams maintain over time.</p>
+    </div>
   </div>
 
 </section>
 
-<!-- 05 FEATURE DEPTH -->
+<!-- 06 FEATURE DEPTH -->
 <div class="band">
   <div class="bi">
-    <div class="sn">05</div>
+    <div class="sn">06</div>
     <div class="bq">Every booking <span>creates a CRM record</span> automatically - activity, tags, contact, and calendar event - with no manual entry required.</div>
     <div class="feat-grid">
       <div class="feat">
@@ -299,9 +429,9 @@
   </div>
 </div>
 
-<!-- 06 OUTCOME -->
+<!-- 07 OUTCOME -->
 <section>
-  <div class="sn">06</div>
+  <div class="sn">07</div>
   <h2>Outcome</h2>
   <p class="sb meeting-scheduler-case-study-inline-03">Meeting Scheduler is live and in active use across Salesmate. Sales teams can share booking links via email, embed them on websites, or use them inside AI agent conversations - all with automatic CRM activity creation and calendar sync on every booking.</p>
   <div class="oc-cards">
@@ -318,10 +448,14 @@
       <div class="oc-text">Round Robin and Team meeting types make demo distribution and multi-rep calls manageable - with built-in fairness logic and automatic handling of disabled or over-booked team members.</div>
     </div>
   </div>
+  <div class="meeting-walkthrough-card outcome-walkthrough-card">
+    <div class="meeting-walkthrough-label">Walkthrough available</div>
+    <p>How the scheduler works in practice - the public booking experience, guided time proposals, team availability logic, embed setup, and CRM activity creation - is something I cover in a walkthrough. If the scheduling architecture interests you, the product is worth seeing in motion.</p>
+  </div>
 </section>
 
 <footer>
-  <div class="fl">Nitesh Jamod · 2025</div>
+  <div class="fl">Nitesh Jamod · 2026</div>
   <a href="/" class="fn">Next Project →</a>
 </footer>
 

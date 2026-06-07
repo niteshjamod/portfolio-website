@@ -37,7 +37,7 @@ document.addEventListener('mousemove',e=>{
   });
   requestAnimationFrame(trailTick);
 })();
-document.querySelectorAll('a,button,.sc,.sc-wrap,.real-screen,.graphic-wrap,.overview-cell,.challenge-card,.process-step,.persona-card,.ia-pillar,.ds-card,.outcome-card,.feat,.type,.pc,.oc-card,.ev-card,.arch-card,.feat-item,.wm-card,.flow-card').forEach(el=>{
+document.querySelectorAll('a,button,.sc,.sc-wrap,.real-screen,.graphic-wrap,.overview-cell,.challenge-card,.process-step,.persona-card,.ia-pillar,.ds-card,.outcome-card,.feat,.type,.pc,.oc-card,.ev-card,.arch-card,.feat-item,.wm-card,.flow-card,.unified-flow-card,.meeting-flow-card,.case-walkthrough-card,.case-decision-note,.meeting-walkthrough-card,.meeting-decision-note').forEach(el=>{
   el.addEventListener('mouseenter',()=>cur.classList.add('big'));
   el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
 });

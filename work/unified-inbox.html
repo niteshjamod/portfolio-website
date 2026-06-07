@@ -47,13 +47,10 @@
       <p class="hsub">A complete re-architecture of how Salesmate handles customer conversations - from a single rigid workspace to a flexible, multi-inbox system that scales across teams and channels.</p>
     </div>
     <div class="hero-right">
-      <div class="sc-wrap">
-  <div class="sc-wrap-label">Live product <span>- All channels, one view</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-01.png" alt="Unified Inbox - system views, channel list, and conversation panel" class="img-fluid">
-  <div class="sc-cap">Unified Inbox - system views, channel list, and conversation panel</div></div></div>
+      <div class="case-walkthrough-card">
+        <div class="case-walkthrough-label">Live product walkthrough</div>
+        <p>This case study documents the architectural decisions and design reasoning behind the Unified Inbox re-build. The live product - including full inbox configuration, channel management, and AI Copilot flows - is available to walk through in conversation.</p>
+      </div>
     </div>
   </div>
   <div class="hm">
@@ -130,9 +127,145 @@
   </div>
 </section>
 
-<!-- 04 ARCHITECTURE -->
+<!-- 04 INFORMATION FLOW -->
+<section class="unified-flow-section flow-architecture" aria-labelledby="unified-flow-title">
+  <div class="unified-flow-head">
+    <div class="unified-flow-kicker">INFORMATION FLOW</div>
+    <h2 id="unified-flow-title">How customer conversations move through the Unified Inbox architecture.</h2>
+    <p>The new Unified Inbox was designed as a layered communication system. Instead of managing channels independently, conversations flow through inboxes, permissions, AI Copilot, knowledge sources, and workflow actions before reaching resolution.</p>
+  </div>
+
+  <div class="unified-flow-stack" aria-label="Unified Inbox layered communication architecture">
+    <article class="unified-flow-row" style="--i:0">
+      <div class="unified-flow-rail"><span>01</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 01</span>
+          <strong>CHANNEL LAYER</strong>
+        </div>
+        <p>Where customer conversations enter the product from every supported communication source.</p>
+        <div class="unified-flow-pills">
+          <span>Email</span><span>WhatsApp</span><span>Facebook</span><span>Instagram</span><span>Chat Widget</span><span>Voice & Text</span><span>TikTok</span>
+        </div>
+        <div class="unified-flow-reveal">The system normalizes channel-specific messages into one conversation model before ownership, access, and response logic are applied.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:1">
+      <div class="unified-flow-rail"><span>02</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 02</span>
+          <strong>INBOX LAYER</strong>
+        </div>
+        <p>How conversations are organized into team-owned workspaces instead of one shared queue.</p>
+        <div class="unified-flow-pills">
+          <span>Sales Inbox</span><span>Support Inbox</span><span>Marketing Inbox</span><span>Custom Inboxes</span>
+        </div>
+        <div class="unified-flow-reveal">Each inbox becomes a container for channels, rules, AI settings, access control, and team-specific operating habits.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:2">
+      <div class="unified-flow-rail"><span>03</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 03</span>
+          <strong>ACCESS LAYER</strong>
+        </div>
+        <p>Where teams define who can view, manage, and act inside each inbox.</p>
+        <div class="unified-flow-pills">
+          <span>Users</span><span>Teams</span><span>Roles</span><span>Inbox Permissions</span>
+        </div>
+        <div class="unified-flow-reveal">Access is managed once at inbox level, removing the old administrative burden of configuring permissions channel by channel.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:3">
+      <div class="unified-flow-rail"><span>04</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 04</span>
+          <strong>AI COPILOT LAYER</strong>
+        </div>
+        <p>Where each inbox defines how AI should assist agents and respond to customers.</p>
+        <div class="unified-flow-pills">
+          <span>AI Suggestions</span><span>Tone Control</span><span>Response Length</span><span>Auto Responses</span><span>Inbox-specific AI Settings</span>
+        </div>
+        <div class="unified-flow-reveal">AI behavior can adapt by inbox, letting a formal sales team and a friendly support team operate differently inside one account.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:4">
+      <div class="unified-flow-rail"><span>05</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 05</span>
+          <strong>KNOWLEDGE LAYER</strong>
+        </div>
+        <p>Where AI and agents pull the right product, support, and business context.</p>
+        <div class="unified-flow-pills">
+          <span>Help Center</span><span>FAQs</span><span>Website Content</span><span>Uploaded Files</span><span>Connected Sources</span>
+        </div>
+        <div class="unified-flow-reveal">Knowledge sources give Copilot and agents a shared source of truth, reducing inconsistent answers across channels.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:5">
+      <div class="unified-flow-rail"><span>06</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 06</span>
+          <strong>AGENT WORKSPACE</strong>
+        </div>
+        <p>The operational surface where agents read, collaborate, and resolve conversations.</p>
+        <div class="unified-flow-pills">
+          <span>Conversation List</span><span>Message Thread</span><span>Contact Details</span><span>Team Collaboration</span><span>AI Assistant</span>
+        </div>
+        <div class="unified-flow-reveal">The workspace combines conversation context, customer data, team visibility, and AI assistance into a single working view.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:6">
+      <div class="unified-flow-rail"><span>07</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 07</span>
+          <strong>ACTIONS LAYER</strong>
+        </div>
+        <p>Where agents and automations turn conversation context into completed work.</p>
+        <div class="unified-flow-pills">
+          <span>Reply</span><span>Assign</span><span>Schedule</span><span>Close</span><span>Workflows</span><span>Automations</span>
+        </div>
+        <div class="unified-flow-reveal">Actions make the inbox more than a message viewer: agents can move work forward without leaving the communication flow.</div>
+      </div>
+    </article>
+
+    <article class="unified-flow-row" style="--i:7">
+      <div class="unified-flow-rail"><span>08</span></div>
+      <div class="unified-flow-card" tabindex="0">
+        <div class="unified-flow-card-top">
+          <span>Layer 08</span>
+          <strong>ANALYTICS LAYER</strong>
+        </div>
+        <p>How teams understand responsiveness, resolution quality, and operational health.</p>
+        <div class="unified-flow-pills">
+          <span>Response Time</span><span>Resolution Rate</span><span>AI Performance</span><span>Team Performance</span><span>Inbox Health</span>
+        </div>
+        <div class="unified-flow-reveal">Analytics close the loop by showing whether the inbox architecture is improving service speed, team focus, and AI usefulness.</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="unified-flow-summary">
+    <p>Channels generate conversations. Inboxes organize ownership. Permissions control access. AI enhances responses. Knowledge powers decisions. Agents execute actions. Analytics measure outcomes.</p>
+    <p>Together these layers transform fragmented customer communication into one unified operating system.</p>
+  </div>
+</section>
+
+<!-- 05 ARCHITECTURE -->
 <section class="unified-inbox-v2-inline-02">
-  <div class="sn">04</div>
+  <div class="sn">05</div>
   <h2>Core Architecture</h2>
   <p class="sb">Three foundational decisions shaped the new inbox model. Each one directly addressed a limitation of the old system and made the product significantly easier to set up, manage, and scale.</p>
   <div class="arch-grid">
@@ -154,9 +287,9 @@
   </div>
 </section>
 
-<!-- 05 DESIGN DECISIONS -->
+<!-- 06 DESIGN DECISIONS -->
 <section class="unified-inbox-v2-inline-03">
-  <div class="sn">05</div>
+  <div class="sn">06</div>
   <h2>Design Decisions</h2>
 
   <!-- A -->
@@ -166,16 +299,15 @@
       <div>
         <div class="dec-tag">Inbox Configuration</div>
         <div class="dec-title">Everything Configurable at Inbox Level</div>
-        <div class="dec-desc">Each inbox has its own identity - name, accessibility (everyone or selected users/teams), business hours, and AI Pilot settings. The "Include AI Pilot Messages" toggle controls whether AI-generated replies are visible in the inbox view. The "AI disclaimer" toggle adds a customisable label below AI-generated messages, giving teams control over how transparent they want to be with customers about AI involvement.</div>
+        <div class="dec-desc">The setup model gives each inbox its own identity, access rules, hours, and AI behaviour, so teams can configure the workspace around how they actually operate.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Setup</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-02.png" alt="Inbox Settings - name, accessibility, business hours, AI Pilot visibility and disclaimer controls" class="img-fluid">
-  <div class="sc-cap">Inbox Settings - name, accessibility, business hours, AI Pilot visibility and disclaimer controls</div></div></div>
+    <div class="case-decision-note">
+      <div class="case-decision-note-label">The configuration surface - and what it reveals about the architecture</div>
+      <p>The Setup tab for each inbox carries four areas: basic identity (name and description), accessibility (open to everyone, or restricted to selected users and teams), business hours, and AI Pilot settings. That last section contains two decisions I'm particularly deliberate about.</p>
+      <p>The first is the "Include AI Pilot Messages" toggle - which controls whether AI-generated replies appear in the inbox at all. Some teams want full transparency with their agents; others want AI working silently in the background. One toggle handles both cases.</p>
+      <p>The second is the AI disclaimer control - a configurable label that appears below AI-generated messages. Teams decide whether their customers know they're talking to an AI. That's not a UI decision - it's a product ethics decision that the design needed to accommodate without forcing a default.</p>
+    </div>
   </div>
 
   <!-- B -->
@@ -185,16 +317,15 @@
       <div>
         <div class="dec-tag">Channel Management</div>
         <div class="dec-title">All Channels Managed From One Table</div>
-        <div class="dec-desc">The Channels tab consolidates every communication channel under a single inbox - Facebook Messenger, Instagram, Salesmate Chat, Voice & Text, WhatsApp Twilio, and more. The status column (Connected / Pending) gives admins a clear at-a-glance view of what's active versus still in setup. Because access is now inherited from the inbox rather than set per-channel, adding a new channel doesn't require reconfiguring permissions - it just works.</div>
+        <div class="dec-desc">Channels were redesigned as children of an inbox, making the table simpler because ownership and access are handled by the parent workspace.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Channels</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-03.png" alt="Channels - all channel types and connection statuses in one table" class="img-fluid">
-  <div class="sc-cap">Channels - all channel types and connection statuses in one table</div></div></div>
+    <div class="case-decision-note">
+      <div class="case-decision-note-label">One table. Every channel. No per-channel permission setup.</div>
+      <p>The Channels tab is a single table listing every communication channel connected to that inbox - Facebook Messenger, Instagram, Salesmate Chat, Voice and Text, WhatsApp Twilio, and others - with a status column showing Connected or Pending.</p>
+      <p>The design decision that made this table possible was the access model change underneath it. In the old system, you'd have to configure permissions for each channel individually. In the new system, access is inherited from the inbox. So the table isn't just a display surface - it's the visible output of an architectural decision.</p>
+      <p>Adding a new channel to an inbox doesn't trigger a permissions conversation. It just works. That simplicity took significant back-end coordination to achieve - the UI is only clean because the system underneath it changed.</p>
+    </div>
   </div>
 
   <!-- C -->
@@ -204,16 +335,15 @@
       <div>
         <div class="dec-tag">AI Copilot Layer</div>
         <div class="dec-title">AI Configured Per Inbox, Not Globally</div>
-        <div class="dec-desc">Copilot Settings let each inbox define its own AI behaviour independently - which channels Copilot is active on, what tone it uses (Formal / Casual / Humorous / Friendly / Matter-of-fact), how long its answers are (Descriptive / Standard / Concise), and which Knowledge Base it pulls from. This means a formal B2B sales inbox and a friendly retail support inbox can both use AI Copilot but with completely different personalities - within the same Salesmate account.</div>
+        <div class="dec-desc">Copilot settings live where the work happens: inside the inbox. That lets different teams use AI with different tones, channels, answer lengths, and knowledge sources.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Inbox Settings · Copilot Settings</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-04.png" alt="Copilot Settings - channel selection, tone, answer length, and knowledge base per inbox" class="img-fluid">
-  <div class="sc-cap">Copilot Settings - channel selection, tone, answer length, and knowledge base per inbox</div></div></div>
+    <div class="case-decision-note">
+      <div class="case-decision-note-label">Per-inbox AI behaviour - not one global setting</div>
+      <p>Copilot Settings live inside each inbox, not at the account level. That placement was a deliberate architectural decision, not a default. Each inbox can define which channels Copilot is active on, what tone it uses - five options from Formal to Matter-of-fact - how long its answers are (Descriptive, Standard, or Concise), and which Knowledge Base it references.</p>
+      <p>The reason this matters: a B2B sales inbox and a retail support inbox within the same Salesmate account have entirely different communication requirements. A global Copilot setting would force a compromise that serves neither well.</p>
+      <p>The per-inbox model means each team configures AI for their context - without affecting anyone else in the account. It sounds obvious stated plainly. Getting engineering to build it that way required sustained advocacy through multiple planning cycles.</p>
+    </div>
   </div>
 
   <!-- D -->
@@ -223,28 +353,23 @@
       <div>
         <div class="dec-tag">eCommerce AI Tools</div>
         <div class="dec-title">A Full AI Retail Layer, Built Into the Inbox</div>
-        <div class="dec-desc">For eCommerce teams, I designed a dedicated Tools section extending the inbox with AI capabilities for online retail: Semantic AI Search (goes beyond keyword matching to understand query context), AI Suggestions for product pages (PDP), category pages, and CMS pages, AI Summarization of product details, AI Search Assist, and Contextual Suggestions to handle queries that fall outside configured tools. All powered by connecting a Shopify or BigCommerce store as the data source.</div>
+        <div class="dec-desc">The eCommerce layer needed to feel like a coherent product capability inside the inbox, not a collection of disconnected AI toggles.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screens <span>- Tools & E-commerce Source</span></div>
-  <div class="sc-grid"><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-05.png" alt="Tools - seven AI-powered eCommerce capabilities, each independently toggleable" class="img-fluid">
-  <div class="sc-cap">Tools - seven AI-powered eCommerce capabilities, each independently toggleable</div></div><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Unified Inbox</div></div>
-  <img src="../assets/images/unified-inbox-v2-06.png" alt="E-commerce Source - connect Shopify or BigCommerce to power all AI tools" class="img-fluid">
-  <div class="sc-cap">E-commerce Source - connect Shopify or BigCommerce to power all AI tools</div></div></div></div>
+    <div class="case-decision-note">
+      <div class="case-decision-note-label">A second product layer - built into the inbox, not bolted on</div>
+      <p>The Tools section extends the inbox with seven AI capabilities for eCommerce teams: Semantic AI Search, AI Suggestions for product detail pages, category pages, and CMS pages, AI Summarization, AI Search Assist, and Contextual Suggestions for queries that fall outside the configured tools. Each capability is independently toggleable - teams enable only what's relevant to their stack.</p>
+      <p>The data source for all of it is a connected Shopify or BigCommerce store. The design challenge here wasn't the individual features - it was making seven distinct AI capabilities feel like one coherent layer rather than a settings page that grew out of control.</p>
+      <p>The solution was treating the Tools section as its own tab with its own information hierarchy, rather than folding the controls into Copilot Settings or the main Setup tab. The separation created breathing room for each tool to be understood individually before a team decides to enable it.</p>
+    </div>
   </div>
 
 </section>
 
-<!-- 06 FEATURE DEPTH -->
+<!-- 07 FEATURE DEPTH -->
 <div class="band">
   <div class="bi">
-    <div class="sn">06</div>
+    <div class="sn">07</div>
     <div class="bq">Beyond the core inbox - <span>a full feature system</span> for managing every edge case agents deal with daily.</div>
     <div class="feat-list">
       <div class="feat-item">
@@ -307,9 +432,9 @@
   </div>
 </div>
 
-<!-- 07 OUTCOME -->
+<!-- 08 OUTCOME -->
 <section>
-  <div class="sn">07</div>
+  <div class="sn">08</div>
   <h2>Outcome</h2>
   <p class="sb unified-inbox-v2-inline-04">The Unified Inbox shipped and is live. Users have responded positively since launch. The architectural shift from single-workspace to multi-inbox - with inbox-level access control and AI built in at every layer - made the product significantly easier to adopt, manage, and grow with.</p>
   <div class="oc-cards">
@@ -326,10 +451,14 @@
       <div class="oc-text">The multi-inbox model scales naturally as teams grow. Sales, support, and marketing can each operate independently within the same account - no workarounds required.</div>
     </div>
   </div>
+  <div class="case-walkthrough-card outcome-walkthrough-card">
+    <div class="case-walkthrough-label">Walkthrough available</div>
+    <p>How the inbox looks in practice - the conversation views, the AI Copilot suggestions in context, the eCommerce tools in a live retail account - is something I cover in a walkthrough. If the architecture interests you, the product is worth seeing in motion.</p>
+  </div>
 </section>
 
 <footer>
-  <div class="fl">Nitesh Jamod · 2025</div>
+  <div class="fl">Nitesh Jamod · 2026</div>
   <a href="/" class="fn">Next Project →</a>
 </footer>
 

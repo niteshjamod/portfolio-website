@@ -1,0 +1,9 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/niteshja/public_html/
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R work $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp robots.txt $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
+    - /bin/cp vercel.json $DEPLOYPATH

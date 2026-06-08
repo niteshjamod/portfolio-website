@@ -441,9 +441,18 @@ nav {
 }
 .exp-card:hover { transform:translate(-2px,-2px); box-shadow:var(--shadow-lg); }
 .exp-badge { width:40px; height:40px; border-radius:50%; border:2px solid var(--black); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:18px; box-shadow:3px 3px 0 var(--black); }
+.exp-body { min-width:0; }
 .exp-role { font-size:14px; font-weight:400; margin-bottom:2px; }
 .exp-co { font-size:13px; color:var(--orange); margin-bottom:2px; }
 .exp-dt { font-family:'Space Grotesk', sans-serif; font-size:10px; letter-spacing:1px; color:#555; }
+.exp-card-group { padding-bottom:22px; }
+.exp-track { margin-top:14px; display:grid; gap:10px; }
+.exp-track-item { position:relative; padding-left:14px; }
+.exp-track-item::before {
+  content:""; position:absolute; left:0; top:6px;
+  width:5px; height:5px; border-radius:50%; background:var(--black);
+}
+.exp-track-role { font-size:12px; font-weight:700; margin-bottom:2px; }
 
 .edu-items { margin-top:32px; display:flex; flex-direction:column; gap:16px; }
 .edu-card { background:var(--cream); border:2px solid var(--black); box-shadow:var(--shadow); border-radius:var(--radius); padding:20px 24px; }

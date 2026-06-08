@@ -47,13 +47,10 @@
       <p class="hsub">A reusable quote document system with cover pages, watermarks, and brand customisation - built directly into the Salesmate Library.</p>
     </div>
     <div class="hero-right">
-      <div class="sc-wrap">
-  <div class="sc-wrap-label">Template Library <span>- Three default templates</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-01.png" alt="Document Templates listing - Basic, Modern, and Original default templates with Edit/Clone/Delete actions" class="img-fluid">
-  <div class="sc-cap">Document Templates listing - Basic, Modern, and Original default templates with Edit/Clone/Delete actions</div></div></div>
+      <div class="document-walkthrough-card">
+        <div class="document-walkthrough-label">Live product walkthrough</div>
+        <p>This case study documents the product decisions, governance rules, and template architecture behind Document Templates - not the interface itself. The live product, including template creation, cover page configuration, watermark controls, and quote generation workflows, is available to walk through in conversation.</p>
+      </div>
     </div>
   </div>
   <div class="hm">
@@ -85,20 +82,16 @@
       <div>
         <div class="dec-tag">Template Management</div>
         <div class="dec-title">Card Grid Library with Safe Delete Rules</div>
-        <div class="dec-desc">Templates are displayed as a card grid showing a visual preview of the document layout - not just a text list. This helps users immediately distinguish between templates without opening each one. The three-dot actions menu on each card gives quick access to Edit, Clone, and Delete. Selecting a card enters a bulk-action mode that surfaces a top-bar Delete button - useful for cleaning up multiple custom templates at once. Default templates (Basic, Modern, Original) show no Delete option - they can only be cloned. The delete restriction for actively-used templates is enforced silently - users simply can't trigger the action if it would break an open quote.</div>
+        <div class="dec-desc">The library needed to let teams manage templates while preventing actions that could break active quote documents.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screens <span>- Library with actions menu + bulk selection mode</span></div>
-  <div class="sc-grid"><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-02.png" alt="Template listing - three-dot menu with Edit, Clone, Delete on Basic Template" class="img-fluid">
-  <div class="sc-cap">Template listing - three-dot menu with Edit, Clone, Delete on Basic Template</div></div><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-03.png" alt="Bulk selection mode - 1 Selected with top-bar Delete action revealed" class="img-fluid">
-  <div class="sc-cap">Bulk selection mode - 1 Selected with top-bar Delete action revealed</div></div></div></div>
+    <div class="document-decision-note">
+      <div class="document-decision-note-label">The library isn't storing documents - it's protecting business operations</div>
+      <p>Document Templates appears to be a simple template library, but the real challenge was governance. Templates aren't isolated assets. They're dependencies used by active quotes that may already be part of a sales process.</p>
+      <p>The product needed to balance two competing requirements: allowing teams to manage and clean up templates while preventing actions that could break active business documents. That's why the system ships with three protected default templates and restricts deletion when a template is still referenced by open quotes.</p>
+      <p>What looks like a template gallery is actually a management layer enforcing document integrity across the Quotes module. Users are free to customize, clone, and evolve their templates, but the system prevents changes that would create inconsistencies in active customer-facing documents.</p>
+      <p>The goal wasn't template management. The goal was operational safety.</p>
+    </div>
   </div>
 
   <!-- B: Creation Flow -->
@@ -108,20 +101,16 @@
       <div>
         <div class="dec-tag">Progressive Creation Flow</div>
         <div class="dec-title">A Single Toggle Adds an Entire Step</div>
-        <div class="dec-desc">The template creation flow uses a top stepper to show the user exactly where they are. By default it's three steps: Basic Information → Template Builder → Preview. When the user enables the "Add Cover Page" toggle on the Basic Information screen, a fourth step is inserted between Basic Information and Template Builder - and the stepper updates immediately to show the new path. This is a clean example of progressive disclosure: the Cover Page step only exists in the flow if the user opted into it. The toggle description reads "Add a cover page to give your document a professional look, enhance the first impression, and personalise it with your branding" - setting the purpose clearly before the user commits.</div>
+        <div class="dec-desc">The creation flow supports simple quote templates by default, then expands only when a user chooses to add branded document structure.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screens <span>- Basic Information: Cover Page toggle OFF vs ON</span></div>
-  <div class="sc-grid"><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-04.png" alt="Cover Page OFF - 3-step flow: Basic Information → Template Builder → Preview" class="img-fluid">
-  <div class="sc-cap">Cover Page OFF - 3-step flow: Basic Information → Template Builder → Preview</div></div><div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-05.png" alt="Cover Page ON - 4-step flow: Basic Information → Cover Page → Template Builder → Preview" class="img-fluid">
-  <div class="sc-cap">Cover Page ON - 4-step flow: Basic Information → Cover Page → Template Builder → Preview</div></div></div></div>
+    <div class="document-decision-note">
+      <div class="document-decision-note-label">A single toggle changes the workflow, not the complexity</div>
+      <p>The creation flow supports both simple and highly branded quote documents. The challenge was exposing advanced capabilities without forcing every user through additional configuration.</p>
+      <p>The solution was progressive architecture rather than progressive disclosure alone. Enabling a cover page doesn't reveal a few extra settings - it inserts an entirely new step into the workflow. The system adapts its structure based on the user's intent.</p>
+      <p>This decision matters because most users create straightforward quote documents. Forcing everyone through cover page configuration would increase complexity for the majority. At the same time, teams investing heavily in branding need significantly more control.</p>
+      <p>The creation flow expands only when the user's requirements expand. Complexity enters the system by choice rather than by default.</p>
+    </div>
   </div>
 
   <!-- C: Cover Page Builder -->
@@ -131,16 +120,17 @@
       <div>
         <div class="dec-tag">Cover Page Builder</div>
         <div class="dec-title">A Focused Canvas - Limited Elements by Design</div>
-        <div class="dec-desc">The Cover Page step uses a simplified version of the Template Builder - same left-panel element picker, same canvas-based editing, but with a deliberately limited element set: Text, Text Section, Image, Video, Table, and Divider. No header or footer. One cover page maximum per template - there's no way to add a second. Design Settings give control over background colour, opacity, padding, row margins, background image (fill, fit, or original size), image position (9-point grid), image repeat, and image opacity. This scoped set of options keeps the cover page focused on first impressions - a visual intro page - rather than becoming a second content area.</div>
+        <div class="dec-desc">The cover page builder uses familiar editing patterns, but deliberately limits what a cover page can become.</div>
       </div>
     </div>
-    <div class="sc-wrap">
-  <div class="sc-wrap-label">Screen <span>- Cover Page builder step with Elements panel</span></div>
-  <div class="sc">
-  <div class="sc-bar"><span></span><span></span><span></span>
-  <div class="sc-url">salesmate.io · Document Templates</div></div>
-  <img src="../assets/images/document-templates-case-study-06.png" alt="Cover Page step - Elements panel (Text, Text Section, Image, Video, Table, Divider) with blank canvas" class="img-fluid">
-  <div class="sc-cap">Cover Page step - Elements panel (Text, Text Section, Image, Video, Table, Divider) with blank canvas</div></div></div>
+    <div class="document-decision-note">
+      <div class="document-decision-note-label">Deliberate constraints create better documents</div>
+      <p>The Cover Page Builder uses the same editing foundation as the main document builder, but with a deliberately restricted set of capabilities.</p>
+      <p>The design challenge wasn't deciding what to add. It was deciding what not to add.</p>
+      <p>Without constraints, cover pages quickly become second documents, filled with unnecessary content, repeated information, and inconsistent layouts. The builder therefore supports only the elements required to create a strong first impression while intentionally excluding capabilities that belong inside the document itself.</p>
+      <p>The one-cover-page limit follows the same philosophy. A cover page has a specific purpose: introduce the document and establish branding. Once it starts behaving like a content section, it stops serving that purpose.</p>
+      <p>The constraints aren't limitations. They're guardrails that preserve the role of the cover page within the larger document experience.</p>
+    </div>
   </div>
 
   <!-- D: Watermark -->
@@ -150,8 +140,16 @@
       <div>
         <div class="dec-tag">Design Settings - Watermark</div>
         <div class="dec-title">Branding, Copyright, or Security Watermarks - Per Page Control</div>
-        <div class="dec-desc">Watermark Options live in the template's Design Settings sidebar. Users choose None, Text, or Image. Both text and image watermarks support direction (diagonal, horizontal, vertical), scale (1–100%), and opacity - giving control over how dominant or subtle the watermark appears. Text watermarks add font family and text colour options; the default colour is #5148E5. Image watermarks support PNG/JPG uploads up to 5MB with a default opacity of 14% - intentionally faint. The watermark applies to all pages by default. For pages where it's not wanted, each page has its own Actions menu → Page Settings → "Apply Watermark" toggle - a per-page override that doesn't affect the rest of the template.</div>
+        <div class="dec-desc">Watermarks needed to support branding, compliance, ownership, and exceptions without making every page a configuration burden.</div>
       </div>
+    </div>
+    <div class="document-decision-note">
+      <div class="document-decision-note-label">Branding and document control needed different levels of authority</div>
+      <p>Watermarks seem like a visual customization feature, but they introduce a governance problem. Some organizations use them for branding. Others use them for compliance, ownership identification, or internal document control.</p>
+      <p>The challenge was creating a system that worked at both the template level and the page level without becoming difficult to manage.</p>
+      <p>The solution was a layered model. Watermarks are configured globally so templates maintain consistency by default. Individual pages can then override that decision when specific content requires different treatment.</p>
+      <p>This prevents teams from repeatedly configuring watermark settings across every page while still giving them the flexibility to make exceptions when needed.</p>
+      <p>What appears to be a branding feature is actually a document governance system with visual output.</p>
     </div>
     <div class="wm-grid">
       <div class="wm-card">
@@ -236,6 +234,10 @@
       <div class="oc-label">Safe by Default</div>
       <div class="oc-text">Default templates can't be deleted. Active templates can't be deleted. Every design decision defaults to the safest state - users only unlock more if they deliberately opt in.</div>
     </div>
+  </div>
+  <div class="document-walkthrough-card outcome-walkthrough-card">
+    <div class="document-walkthrough-label">Walkthrough available</div>
+    <p>How templates behave in practice - from cover page generation and document branding to template governance, watermark controls, and quote creation workflows - is something I cover in a walkthrough. The interface is intentionally straightforward. The decisions underneath it are what make the system scalable across teams.</p>
   </div>
 </section>
 

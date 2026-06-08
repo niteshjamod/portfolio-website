@@ -1,7 +1,7 @@
 // ── IMAGE SOURCE (external file) ─────────────────
 const profilePhoto = document.querySelector('.photo-frame img');
 if (profilePhoto) {
-  profilePhoto.src = 'assets/images/Nitesh_jamod_halfbody.png';
+  profilePhoto.src = 'assets/images/Nitesh_jamod_halfbody.webp';
 }
 
 // ── CURSOR ──────────────────────────────────────

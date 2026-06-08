@@ -4,6 +4,30 @@ if (profilePhoto) {
   profilePhoto.src = 'assets/images/Nitesh_jamod_halfbody.webp';
 }
 
+// ── CLEAN SAME-PAGE NAVIGATION ─────────────────
+function scrollToSectionWithoutHash(hash, smooth = true) {
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const hash = link.getAttribute('href');
+    if (!hash || hash === '#') return;
+
+    event.preventDefault();
+    scrollToSectionWithoutHash(hash);
+  });
+});
+
+if (window.location.hash) {
+  const initialHash = window.location.hash;
+  window.requestAnimationFrame(() => scrollToSectionWithoutHash(initialHash, false));
+}
+
 // ── CURSOR ──────────────────────────────────────
 let cur = document.getElementById('cur');
 if (!cur) {

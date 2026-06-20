@@ -132,3 +132,53 @@ document.querySelectorAll('.rv,.flow-architecture').forEach(el=>io.observe(el));
 
 // ── TICKER CLONE ────────────────────────────────
 // already doubled in HTML for seamless loop
+
+// ── SENTENCE CASE: HEADINGS & CTA BUTTONS ───────
+(function applySentenceCase(){
+  const preserved = new Map([
+    ['ai','AI'], ['b2b','B2B'], ['ceo','CEO'], ['crm','CRM'], ['css','CSS'],
+    ['figma','Figma'], ['figjam','FigJam'], ['html','HTML'], ['i','I'], ['linkedin','LinkedIn'],
+    ['nj','NJ'], ['saas','SaaS'], ['salesmate','Salesmate'], ['skara','Skara'],
+    ['sms','SMS'], ['storybook','Storybook'], ['tiktok','TikTok'], ['ui','UI'],
+    ['ux','UX'], ['whatsapp','WhatsApp']
+  ]);
+
+  function convertElement(element){
+    let sentenceStarted = false;
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      const original = node.nodeValue;
+      let lastWordEnd = 0;
+      node.nodeValue = original.replace(/[A-Za-z]+/g, (word, offset) => {
+        const betweenWords = original.slice(lastWordEnd, offset);
+        if (/[.!?]\s*$/.test(betweenWords)) sentenceStarted = false;
+        const key = word.toLowerCase();
+        const protectedWord = preserved.get(key);
+        let result;
+        if (protectedWord) {
+          result = protectedWord;
+        } else if (!sentenceStarted) {
+          result = key.charAt(0).toUpperCase() + key.slice(1);
+        } else {
+          result = key;
+        }
+        sentenceStarted = true;
+        lastWordEnd = offset + word.length;
+        return result;
+      });
+    }
+  }
+
+  const selectors = [
+    'h1','h2','h3',
+    '.proj-title','.sk-title','.proc-title','.exp-role','.edu-deg',
+    '.contact-heading','.contact-big','.section-title','.hero-title',
+    '.persona-name','.ia-pillar-title','.solution-title','.arch-title',
+    '.dec-title','.type-title',
+    'button','.btn-primary','.btn-secondary','.nav-resume','.case-nav-resume',
+    '.case-footer-resume','.footer-next','.fn'
+  ].join(',');
+
+  document.querySelectorAll(selectors).forEach(convertElement);
+})();

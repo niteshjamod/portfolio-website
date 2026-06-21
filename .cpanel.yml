@@ -2,7 +2,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/niteshja/public_html/
     - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R output $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/output/pdf
+    - /bin/cp output/pdf/Nitesh-Jamod-CV2026.pdf $DEPLOYPATH/output/pdf/Nitesh-Jamod-CV2026.pdf
     - /bin/cp -R work $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp leadership.html $DEPLOYPATH

@@ -31,12 +31,27 @@
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="page-document-templates-case-study">
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+<aside class="case-side-nav" aria-label="Case study navigation">
+  <a href="#overview">Overview</a>
+  <a href="#problem">Problem</a>
+  <a href="#research">Research</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#wireframes">Wireframes</a>
+  <a href="#final-design">Final Design</a>
+  <a href="#impact">Impact</a>
+  <a href="#takeaways">Takeaways</a>
+</aside>
 
 <nav>
   <a href="/" class="nl">NJ</a>
   <a href="/" class="nb">← Back to home</a>
-  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-nav-resume" download>Resume ↓</a>
 </nav>
+
+<div class="floating-actions" data-preserve-case aria-label="Quick actions">
+  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="floating-action floating-action-resume" download>Resume ↓</a>
+  <a href="../index.html#contact" class="floating-action floating-action-call">Contact</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -77,7 +92,7 @@
 </div>
 
 <!-- 01 OVERVIEW -->
-<section>
+<section id="overview">
   <div class="sn">01</div>
   <h2>Overview</h2>
   <p class="sb">Document Templates lets Salesmate users create, manage, and reuse branded document layouts for the <strong>Quotes module only</strong>. This feature is scoped exclusively to quotes - it does not apply to other CRM modules. Instead of building a quote document from scratch each time, teams create a template once - with cover page, content layout, header/footer, and watermark - and apply it whenever they generate a quote.</p>
@@ -85,7 +100,7 @@
 </section>
 
 <!-- 02 DESIGN DECISIONS -->
-<section class="document-templates-case-study-inline-02">
+<section class="document-templates-case-study-inline-02" id="problem">
   <div class="sn">02</div>
   <h2>Design Decisions</h2>
 
@@ -108,6 +123,7 @@
     </div>
   </div>
 
+  <span class="case-anchor" id="research"></span>
   <!-- B: Creation Flow -->
   <div class="dec">
     <div class="dec-hdr">
@@ -127,6 +143,7 @@
     </div>
   </div>
 
+  <span class="case-anchor" id="strategy"></span>
   <!-- C: Cover Page Builder -->
   <div class="dec">
     <div class="dec-hdr">
@@ -147,6 +164,7 @@
     </div>
   </div>
 
+  <span class="case-anchor" id="wireframes"></span>
   <!-- D: Watermark -->
   <div class="dec">
     <div class="dec-hdr">
@@ -194,7 +212,7 @@
 </section>
 
 <!-- 03 FEATURE SUMMARY -->
-<section class="document-templates-case-study-inline-03">
+<section class="document-templates-case-study-inline-03" id="final-design">
   <div class="sn">03</div>
   <h2>Feature Summary</h2>
   <div class="feat-grid">
@@ -232,7 +250,7 @@
 </section>
 
 <!-- 04 OUTCOME -->
-<section class="document-templates-case-study-inline-04">
+<section class="document-templates-case-study-inline-04" id="impact">
   <div class="sn">04</div>
   <h2>Outcome</h2>
   <div class="oc-cards">
@@ -255,7 +273,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="takeaways">
   <div class="fl">Nitesh Jamod · 2026</div>
   <div class="case-footer-links"><a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-footer-resume" download>Download Resume</a><a href="/" class="fn">Back to home →</a></div>
 </footer>

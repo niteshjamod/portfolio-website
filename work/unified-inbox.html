@@ -31,12 +31,27 @@
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="page-unified-inbox-v2">
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+<aside class="case-side-nav" aria-label="Case study navigation">
+  <a href="#overview">Overview</a>
+  <a href="#problem">Problem</a>
+  <a href="#research">Research</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#wireframes">Wireframes</a>
+  <a href="#final-design">Final Design</a>
+  <a href="#impact">Impact</a>
+  <a href="#takeaways">Takeaways</a>
+</aside>
 
 <nav>
   <a href="/" class="nl">NJ</a>
   <a href="/" class="nb">← Back to home</a>
-  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-nav-resume" download>Resume ↓</a>
 </nav>
+
+<div class="floating-actions" data-preserve-case aria-label="Quick actions">
+  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="floating-action floating-action-resume" download>Resume ↓</a>
+  <a href="../index.html#contact" class="floating-action floating-action-call">Contact</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -78,7 +93,7 @@
 </div>
 
 <!-- 01 OVERVIEW -->
-<section>
+<section id="overview">
   <div class="sn">01</div>
   <h2>Overview</h2>
   <p class="sb">The Unified Inbox is one of Salesmate's core communication surfaces - the place where agents handle all customer conversations across every channel. This project wasn't a UI refresh. It was a complete re-engineering: moving from a single-workspace, per-channel system to a flexible, multi-inbox architecture with inbox-level access control, built-in AI Copilot, and a dedicated eCommerce AI tools layer.</p>
@@ -86,7 +101,7 @@
 </section>
 
 <!-- 02 PROBLEM -->
-<div class="band">
+<div class="band" id="problem">
   <div class="bi">
     <div class="sn">02</div>
     <div class="bq">The old system <span>forced every team</span> into one workspace - with channel access managed separately for each channel, and a manual activation step just to get started.</div>
@@ -111,7 +126,7 @@
 </div>
 
 <!-- 03 OLD vs NEW -->
-<section>
+<section id="research">
   <div class="sn">03</div>
   <h2>Old System vs New</h2>
   <p class="sb">The core shift was architectural - from a single, centrally-managed workspace to a model where each team can own their inbox independently, with access and AI configured at the inbox level rather than scattered across individual channels.</p>
@@ -142,7 +157,7 @@
 </section>
 
 <!-- 04 INFORMATION FLOW -->
-<section class="unified-flow-section flow-architecture" aria-labelledby="unified-flow-title">
+<section class="unified-flow-section flow-architecture" id="strategy" aria-labelledby="unified-flow-title">
   <div class="unified-flow-head">
     <div class="unified-flow-kicker">INFORMATION FLOW</div>
     <h2 id="unified-flow-title">How customer conversations move through the Unified Inbox architecture.</h2>
@@ -302,7 +317,7 @@
 </section>
 
 <!-- 06 DESIGN DECISIONS -->
-<section class="unified-inbox-v2-inline-03">
+<section class="unified-inbox-v2-inline-03" id="wireframes">
   <div class="sn">06</div>
   <h2>Design Decisions</h2>
 
@@ -381,7 +396,7 @@
 </section>
 
 <!-- 07 FEATURE DEPTH -->
-<div class="band">
+<div class="band" id="final-design">
   <div class="bi">
     <div class="sn">07</div>
     <div class="bq">Beyond the core inbox - <span>a full feature system</span> for managing every edge case agents deal with daily.</div>
@@ -447,7 +462,7 @@
 </div>
 
 <!-- 08 OUTCOME -->
-<section>
+<section id="impact">
   <div class="sn">08</div>
   <h2>Outcome</h2>
   <p class="sb unified-inbox-v2-inline-04">The Unified Inbox shipped and is live. Users have responded positively since launch. The architectural shift from single-workspace to multi-inbox - with inbox-level access control and AI built in at every layer - made the product significantly easier to adopt, manage, and grow with.</p>
@@ -471,7 +486,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="takeaways">
   <div class="fl">Nitesh Jamod · 2026</div>
   <div class="case-footer-links"><a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-footer-resume" download>Download Resume</a><a href="/" class="fn">Back to home →</a></div>
 </footer>

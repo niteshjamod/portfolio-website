@@ -84,12 +84,27 @@
 </style>
 </head>
 <body class="page-ai-pilot-case-study-final">
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+<aside class="case-side-nav" aria-label="Case study navigation">
+  <a href="#overview">Overview</a>
+  <a href="#problem">Problem</a>
+  <a href="#research">Research</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#wireframes">Wireframes</a>
+  <a href="#final-design">Final Design</a>
+  <a href="#impact">Impact</a>
+  <a href="#takeaways">Takeaways</a>
+</aside>
 
 <nav>
   <a href="/" class="nav-logo">NJ</a>
   <a href="/" class="nav-back">← Back to home</a>
-  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-nav-resume" download>Resume ↓</a>
 </nav>
+
+<div class="floating-actions" data-preserve-case aria-label="Quick actions">
+  <a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="floating-action floating-action-resume" download>Resume ↓</a>
+  <a href="../index.html#contact" class="floating-action floating-action-call">Contact</a>
+</div>
 
 <!-- ════════════════════════════════════════════
      HERO
@@ -136,20 +151,20 @@
 </div>
 
 <!-- 01. OVERVIEW -->
-<section>
+<section id="overview">
   <div class="section-number">01</div>
   <h2 class="section-title">Project Overview</h2>
   <div class="overview-grid">
     <div class="overview-cell"><div class="overview-cell-label">The Product</div><div class="overview-cell-value">Skara AI Agent Builder - part of Salesmate's AI Agents platform. A no-code tool for building and deploying AI agents across web, WhatsApp, SMS, and voice channels.</div></div>
     <div class="overview-cell"><div class="overview-cell-label">The Goal</div><div class="overview-cell-value">Make AI agent setup accessible to non-technical sales managers - removing the dependency on developers for every new agent configuration.</div></div>
-    <div class="overview-cell"><div class="overview-cell-label">My Contribution</div><div class="overview-cell-value">End-to-end product design - user research, information architecture, high-fidelity UI, design system components, and developer handoff.</div></div>
-    <div class="overview-cell"><div class="overview-cell-label">Design System</div><div class="overview-cell-value">New components built on Salesmate's Global Design System and fed into sm-framework - Salesmate's internal Angular component library.</div></div>
+    <div class="overview-cell"><div class="overview-cell-label">My Contribution</div><div class="overview-cell-value">End-to-end product design across 5 configuration layers - user research, information architecture, high-fidelity UI, design system components, and developer handoff.</div></div>
+    <div class="overview-cell"><div class="overview-cell-label">Design System</div><div class="overview-cell-value">New components built on Salesmate's Global Design System and fed into sm-framework - a 150+ component internal Angular library.</div></div>
   </div>
   <div class="context-box"><p>Salesmate customers wanted to use AI to automate support and sales conversations - but existing tools required coding knowledge or complex API setup. The goal was to abstract that complexity into a flow that felt like onboarding a new team member, not programming a system.</p></div>
 </section>
 
 <!-- 02. PROBLEM -->
-<div class="problem-statement">
+<div class="problem-statement" id="problem">
   <div class="ai-pilot-case-study-final-inline-03">
     <div class="section-number">02</div>
     <div class="problem-quote">"How might we help non-technical sales managers build, train, and deploy <span>safe AI agents</span> without writing a single line of code?"</div>
@@ -162,7 +177,7 @@
 </div>
 
 <!-- 03. PERSONAS -->
-<section class="ai-pilot-case-study-final-inline-04">
+<section class="ai-pilot-case-study-final-inline-04" id="research">
   <div class="section-number">03</div>
   <h2 class="section-title">User Personas</h2>
   <div class="personas-grid">
@@ -184,7 +199,7 @@
 </section>
 
 <!-- 04. FLOW -->
-<section class="ai-info-flow-section flow-architecture" aria-labelledby="information-flow-title">
+<section class="ai-info-flow-section flow-architecture" id="strategy" aria-labelledby="information-flow-title">
   <div class="flow-section-head">
     <div class="flow-eyebrow">INFORMATION FLOW</div>
     <h2 id="information-flow-title">How an AI Agent moves from identity definition to deployment through a structured five-layer architecture.</h2>
@@ -273,7 +288,7 @@
 </section>
 
 <!-- 05. SOLUTIONS -->
-<section class="ai-pilot-case-study-final-inline-09">
+<section class="ai-pilot-case-study-final-inline-09" id="wireframes">
   <div class="section-number">05</div>
   <h2 class="section-title">Key Design Decisions</h2>
   <div class="solutions-list">
@@ -349,10 +364,10 @@
 </section>
 
 <!-- 06. DESIGN SYSTEM -->
-<section class="ai-pilot-case-study-final-inline-18">
+<section class="ai-pilot-case-study-final-inline-18" id="final-design">
   <div class="section-number">06</div>
   <h2 class="section-title">Design System</h2>
-  <p class="section-body">New components were built on top of Salesmate's Global Design System and fed into sm-framework - Salesmate's internal Angular component library documented in Storybook 8.</p>
+  <p class="section-body">New AI-specific components were built on top of Salesmate's Global Design System and fed into sm-framework - a 150+ component Angular library documented in Storybook 8.</p>
 
   <div class="ds-grid ai-pilot-case-study-final-inline-21">
     <div class="ds-card"><div class="ds-card-label">Existing Foundation</div><div class="ds-card-title">Salesmate Global Design System</div><div class="ds-card-desc">Core inputs, buttons, modals, and typography tokens pulled from the existing global system - keeping the agent builder consistent with the rest of the Salesmate product.</div></div>
@@ -361,7 +376,7 @@
 </section>
 
 <!-- 07. OUTCOME -->
-<div class="outcome-section">
+<div class="outcome-section" id="impact">
   <div class="outcome-inner">
     <div class="section-number">07</div>
     <div class="outcome-quote">"The success wasn't just in the UI - it was in the <span>abstraction.</span> We hid the complexity of AI behind a flow that felt like hiring a new team member."</div>
@@ -377,7 +392,7 @@
   </div>
 </div>
 
-<footer>
+<footer id="takeaways">
   <div class="footer-label">Nitesh Jamod · 2026</div>
   <div class="case-footer-links"><a href="../output/pdf/Nitesh-Jamod-CV2026.pdf" class="case-footer-resume" download>Download Resume</a><a href="/" class="footer-next">Back to home <span>→</span></a></div>
 </footer>

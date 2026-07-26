@@ -28,6 +28,84 @@ if (window.location.hash) {
   window.requestAnimationFrame(() => scrollToSectionWithoutHash(initialHash, false));
 }
 
+// ── READING PROGRESS ───────────────────────────
+(function initReadingProgress(){
+  const caseStudyPages = [
+    'page-ai-pilot-case-study-final',
+    'page-document-templates-case-study',
+    'page-meeting-scheduler-case-study',
+    'page-unified-inbox-v2'
+  ];
+  if (!caseStudyPages.some(pageClass => document.body.classList.contains(pageClass))) return;
+
+  let progress = document.querySelector('.reading-progress');
+  if (!progress) {
+    progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progress);
+  }
+
+  let bar = progress.querySelector('.reading-progress-bar');
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.className = 'reading-progress-bar';
+    progress.appendChild(bar);
+  }
+
+  let ticking = false;
+
+  function update(){
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = scrollable > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100)) : 0;
+    bar.style.width = pct + '%';
+    ticking = false;
+  }
+
+  function requestUpdate(){
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  update();
+})();
+
+// ── CASE STUDY SIDE NAV ───────────────────────
+(function initCaseSideNav(){
+  const nav = document.querySelector('.case-side-nav');
+  if (!nav) return;
+
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const items = links
+    .map(link => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) {
+        link.hidden = true;
+        return null;
+      }
+      target.style.scrollMarginTop = '120px';
+      return { link, target };
+    })
+    .filter(Boolean);
+  if (!items.length) return;
+
+  function updateActive(){
+    const current = items.reduce((active, item) => {
+      const top = item.target.getBoundingClientRect().top;
+      return top <= 150 ? item : active;
+    }, items[0]);
+
+    items.forEach(item => item.link.classList.toggle('is-active', item === current));
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('resize', updateActive);
+  updateActive();
+})();
+
 // ── CURSOR ──────────────────────────────────────
 let cur = document.getElementById('cur');
 if (!cur) {
@@ -144,6 +222,8 @@ document.querySelectorAll('.rv,.flow-architecture').forEach(el=>io.observe(el));
   ]);
 
   function convertElement(element){
+    if (element.closest('[data-preserve-case]')) return;
+
     let sentenceStarted = false;
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
     let node;
